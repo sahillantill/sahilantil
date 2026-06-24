@@ -1,38 +1,41 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>Sahil Antil | Premium Infrastructure & Real Estate Tycoon</title>
-    <meta name="description" content="Sahil Antil: Founder of Kavach Builders & Kavach Estate. Executing ultra-premium infrastructure, commercial real estate, and industrial developments across Haryana & KMP Belt.">
-    <meta name="keywords" content="Sahil Antil, Kavach Builders, Kavach Estate, Luxury Real Estate Haryana, Industrial Infrastructure Sonipat, KMP Corridor Development">
+    <!-- AI & Advanced SEO Tags -->
+    <title>Sahil Antil | Modern Real Estate & Infrastructure Entrepreneur</title>
+    <meta name="description" content="Sahil Antil is the Founder & CEO of Kavach Builders and Kavach Estate. Explore vibrant infrastructure projects, KMP land deals, and animated market insights.">
+    <meta name="keywords" content="Sahil Antil, Kavach Builders, Kavach Estate, Sonipat Real Estate Map, KMP Growth, Industrial Hub Haryana, Animated Real Estate Portfolio">
     <meta name="author" content="Sahil Antil">
-    <meta name="theme-color" content="#000000">
+    <meta name="theme-color" content="#ffffff">
 
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
 
+    <!-- Google Schema for AI Search -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@graph": [
         {
           "@type": "Person",
-          "@id": "https://www.sahilantil.com/#sahil",
           "name": "Sahil Antil",
-          "jobTitle": "Founder & CEO",
-          "description": "Infrastructure and Commercial Real Estate Entrepreneur based in Sonipat, Haryana.",
+          "jobTitle": "Founder, CEO & Director",
+          "url": "https://www.sahilantil.com",
+          "image": "https://www.sahilantil.com/sahil-photo.jpg",
           "founder": [
             { "@type": "Organization", "name": "Kavach Builders" },
             { "@type": "Organization", "name": "Kavach Estate" }
           ],
           "sameAs": [
             "https://linkedin.com/in/sahillantill",
-            "https://x.com/sahillantill",
             "https://www.instagram.com/sahillantill"
           ]
         }
@@ -41,293 +44,442 @@
     </script>
 
     <style>
+        /* --- Core Variables & Premium Colorful Palette --- */
         :root {
-            /* Onyx Dark & Champagne Gold Theme */
-            --bg-base: #050505;
-            --bg-surface: rgba(20, 20, 20, 0.6);
-            --bg-surface-hover: rgba(30, 30, 30, 0.8);
+            --bg-body: #F4F7F9; /* Soft Modern White/Blueish Gray */
+            --bg-card: #FFFFFF;
             
-            --text-pure: #FFFFFF;
-            --text-muted: #A1A1AA;
+            --text-dark: #0F172A;
+            --text-gray: #64748B;
             
-            --accent-gold: #D4AF37;
-            --accent-glow: rgba(212, 175, 55, 0.15);
+            /* Vibrant Brand Gradients */
+            --grad-builders: linear-gradient(135deg, #FF6B6B 0%, #FF8E53 100%); /* Coral/Orange for Construction */
+            --grad-estate: linear-gradient(135deg, #12C2E9 0%, #C471ED 50%, #F64F59 100%); /* Vibrant Multi-color for Estate */
+            --grad-map: linear-gradient(135deg, #4E65FF 0%, #92EFFD 100%); /* Ocean Blue for Map */
+            --grad-graph: linear-gradient(135deg, #11998E 0%, #38EF7D 100%); /* Neon Green for Growth */
             
-            --border-subtle: rgba(255, 255, 255, 0.08);
-            --border-highlight: rgba(212, 175, 55, 0.4);
+            --shadow-soft: 0 15px 35px rgba(0, 0, 0, 0.05);
+            --shadow-hover: 0 20px 40px rgba(0, 0, 0, 0.12);
+            --radius-card: 28px;
             
             --font-main: 'Plus Jakarta Sans', sans-serif;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; overflow-x: hidden; }
+        body { font-family: var(--font-main); background-color: var(--bg-body); color: var(--text-dark); overflow-x: hidden; line-height: 1.6; }
+
+        /* Animated Background Aurora Mesh */
+        .aurora-bg {
+            position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: -1; overflow: hidden; pointer-events: none;
+            background: #F4F7F9;
+        }
+        .blob { position: absolute; filter: blur(90px); opacity: 0.4; border-radius: 50%; animation: floatBg 15s infinite alternate ease-in-out; }
+        .blob-1 { top: -10%; left: -10%; width: 50vw; height: 50vw; background: #FF6B6B; }
+        .blob-2 { bottom: -10%; right: -10%; width: 60vw; height: 60vw; background: #92EFFD; animation-delay: -5s; }
+        .blob-3 { top: 40%; left: 30%; width: 40vw; height: 40vw; background: #C471ED; animation-delay: -10s; }
+
+        @keyframes floatBg { 0% { transform: translate(0,0) scale(1); } 100% { transform: translate(50px, 50px) scale(1.1); } }
+
+        .container { max-width: 1240px; margin: 0 auto; padding: 0 2rem; }
+        section { padding: 6rem 0; }
+
+        /* --- Header / Navbar --- */
+        .header {
+            position: fixed; top: 0; left: 0; width: 100%; z-index: 1000;
+            background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(0,0,0,0.05); transition: 0.3s;
+        }
+        .nav-inner { display: flex; justify-content: space-between; align-items: center; height: 80px; }
+        .logo { font-size: 1.5rem; font-weight: 800; color: var(--text-dark); text-decoration: none; }
+        .logo span { background: var(--grad-builders); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
         
-        body {
-            font-family: var(--font-main);
-            background-color: var(--bg-base);
-            color: var(--text-pure);
-            line-height: 1.6;
-            overflow-x: hidden;
-            -webkit-font-smoothing: antialiased;
-        }
-
-        /* Ambient Background Glow */
-        .ambient-bg {
-            position: fixed; top: -50%; left: -50%; width: 200%; height: 200%;
-            background: radial-gradient(circle at 50% 50%, rgba(212, 175, 55, 0.03), transparent 60%);
-            z-index: -1; pointer-events: none;
-        }
-
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
-        section { padding: 8rem 0; position: relative; }
-
-        /* --- Dynamic Island Navigation --- */
-        .nav-container {
-            position: fixed; top: 2rem; left: 50%; transform: translateX(-50%);
-            z-index: 100; width: 90%; max-width: 600px;
-        }
+        .nav-links { display: flex; gap: 2.5rem; list-style: none; align-items: center; }
+        .nav-links a { color: var(--text-gray); font-weight: 600; text-decoration: none; transition: 0.3s; }
+        .nav-links a:hover { color: var(--text-dark); }
         
-        .nav-island {
-            background: rgba(15, 15, 15, 0.8);
-            backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px);
-            border: 1px solid var(--border-subtle);
-            border-radius: 100px;
-            padding: 0.75rem 1.5rem;
-            display: flex; justify-content: space-between; align-items: center;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.1);
-        }
-
-        .nav-logo { font-weight: 800; font-size: 1.1rem; color: var(--text-pure); text-decoration: none; letter-spacing: 1px; }
-        .nav-logo span { color: var(--accent-gold); }
-
-        .nav-links { display: flex; gap: 2rem; list-style: none; align-items: center; }
-        .nav-links a { font-size: 0.9rem; font-weight: 500; color: var(--text-muted); text-decoration: none; transition: color 0.3s; }
-        .nav-links a:hover { color: var(--text-pure); }
-
         .btn-connect {
-            background: var(--text-pure); color: var(--bg-base) !important;
-            padding: 8px 20px; border-radius: 50px; font-weight: 700;
-            transition: all 0.3s ease;
+            background: var(--text-dark); color: #fff !important; padding: 10px 24px;
+            border-radius: 50px; transition: 0.3s; display: inline-flex; align-items: center; gap: 8px;
         }
-        .btn-connect:hover { background: var(--accent-gold); box-shadow: 0 0 20px rgba(212, 175, 55, 0.3); }
+        .btn-connect:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(15,23,42,0.2); }
+        .menu-toggle { display: none; background: none; border: none; font-size: 1.5rem; cursor: pointer; color: var(--text-dark); }
 
         /* --- Hero Section --- */
-        .hero { min-height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; padding-top: 6rem; }
+        .hero { min-height: 100vh; display: flex; align-items: center; padding-top: 5rem; }
+        .hero-grid { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 3rem; align-items: center; }
         
         .badge {
-            display: inline-block; border: 1px solid var(--border-subtle);
-            padding: 8px 20px; border-radius: 50px; font-size: 0.85rem; font-weight: 600;
-            color: var(--accent-gold); margin-bottom: 2rem; background: rgba(212, 175, 55, 0.05);
-            letter-spacing: 2px; text-transform: uppercase;
+            display: inline-flex; align-items: center; gap: 10px; padding: 8px 16px; border-radius: 50px;
+            background: #fff; box-shadow: 0 5px 15px rgba(0,0,0,0.05); font-weight: 700; font-size: 0.9rem; margin-bottom: 1.5rem;
         }
+        .badge-dot { width: 10px; height: 10px; background: #FF6B6B; border-radius: 50%; animation: pulseBadge 2s infinite; }
+        @keyframes pulseBadge { 0% { box-shadow: 0 0 0 0 rgba(255, 107, 107, 0.4); } 70% { box-shadow: 0 0 0 10px rgba(255, 107, 107, 0); } 100% { box-shadow: 0 0 0 0 rgba(255, 107, 107, 0); } }
 
-        .hero h1 { font-size: 5.5rem; font-weight: 800; line-height: 1.1; letter-spacing: -2px; margin-bottom: 1.5rem; }
-        .hero h1 .outline { color: transparent; -webkit-text-stroke: 1px rgba(255,255,255,0.5); }
+        .hero h1 { font-size: 4.5rem; font-weight: 800; line-height: 1.1; margin-bottom: 1rem; letter-spacing: -1.5px; }
         
-        .hero p { font-size: 1.25rem; color: var(--text-muted); max-width: 700px; margin: 0 auto 3rem auto; }
+        .type-box { font-size: 1.5rem; font-weight: 700; color: var(--text-gray); margin-bottom: 1.5rem; height: 40px; }
+        .type-box span { background: var(--grad-estate); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
 
-        /* --- Interactive Bento Grid (Mouse Glow Effect) --- */
-        .section-title { font-size: 3rem; font-weight: 800; margin-bottom: 4rem; letter-spacing: -1px; }
-        .section-title span { color: var(--text-muted); font-weight: 400; }
+        .hero p { font-size: 1.15rem; color: var(--text-gray); margin-bottom: 2rem; max-width: 90%; }
+        
+        /* Interactive Profile Picture Box */
+        .hero-visual { position: relative; display: flex; justify-content: center; }
+        .img-wrapper {
+            position: relative; width: 380px; height: 400px; border-radius: 30px;
+            background: #fff; padding: 12px; box-shadow: var(--shadow-soft); z-index: 2;
+            transform: rotate(3deg); transition: 0.4s;
+        }
+        .img-wrapper:hover { transform: rotate(0deg) scale(1.02); }
+        .img-wrapper img { width: 100%; height: 100%; object-fit: cover; border-radius: 20px; }
 
+        /* Floating Graph Animation around Profile */
+        .float-graph {
+            position: absolute; bottom: -20px; left: -30px; background: #fff; padding: 15px; border-radius: 20px;
+            box-shadow: var(--shadow-hover); z-index: 3; display: flex; align-items: flex-end; gap: 6px; height: 100px;
+            animation: bounceFloat 4s infinite ease-in-out;
+        }
+        .f-bar { width: 12px; background: var(--grad-graph); border-radius: 20px; animation: barGrow 2s ease-out forwards; }
+        .fb-1 { height: 30%; } .fb-2 { height: 50%; animation-delay: 0.2s; } .fb-3 { height: 75%; animation-delay: 0.4s; } .fb-4 { height: 100%; animation-delay: 0.6s; }
+        
+        @keyframes bounceFloat { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-15px); } }
+        @keyframes barGrow { 0% { transform: scaleY(0); transform-origin: bottom; } 100% { transform: scaleY(1); transform-origin: bottom; } }
+
+        /* --- Bento Grid --- */
+        .section-title { font-size: 3rem; font-weight: 800; text-align: center; margin-bottom: 4rem; }
+        
         .bento-grid {
-            display: grid; grid-template-columns: repeat(12, 1fr); gap: 1.5rem;
-            grid-auto-rows: minmax(300px, auto);
+            display: grid; grid-template-columns: repeat(12, 1fr); gap: 2rem;
+            grid-auto-rows: minmax(320px, auto);
         }
 
-        /* Glass Cards with Interactive Glow */
-        .glass-card {
-            background: var(--bg-surface);
-            border: 1px solid var(--border-subtle);
-            border-radius: 24px; padding: 2.5rem;
-            position: relative; overflow: hidden;
+        .card {
+            background: var(--bg-card); border-radius: var(--radius-card); padding: 2.5rem;
+            box-shadow: var(--shadow-soft); transition: 0.4s; position: relative; overflow: hidden;
             display: flex; flex-direction: column;
-            transition: transform 0.4s ease, border-color 0.4s ease;
         }
+        .card:hover { transform: translateY(-8px); box-shadow: var(--shadow-hover); }
 
-        /* Mouse Glow Effect Background */
-        .glass-card::before {
-            content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-            background: radial-gradient(800px circle at var(--mouse-x) var(--mouse-y), rgba(255,255,255,0.06), transparent 40%);
-            z-index: 0; opacity: 0; transition: opacity 0.5s ease; pointer-events: none;
+        .span-7 { grid-column: span 7; } .span-5 { grid-column: span 5; } .span-12 { grid-column: span 12; }
+
+        /* Logos inside Cards */
+        .brand-header { display: flex; align-items: center; gap: 15px; margin-bottom: 1.5rem; }
+        .logo-box {
+            width: 70px; height: 70px; border-radius: 18px; padding: 8px;
+            background: #F4F7F9; border: 1px solid rgba(0,0,0,0.05); display: flex; justify-content: center; align-items: center;
         }
-        .glass-card:hover::before { opacity: 1; }
-        .glass-card:hover { transform: translateY(-5px); border-color: var(--border-highlight); }
-
-        .card-content { position: relative; z-index: 1; height: 100%; display: flex; flex-direction: column; }
-
-        .span-8 { grid-column: span 8; }
-        .span-4 { grid-column: span 4; }
-        .span-12 { grid-column: span 12; }
-
-        .card-icon { font-size: 2rem; color: var(--accent-gold); margin-bottom: 1.5rem; }
-        .glass-card h3 { font-size: 1.8rem; font-weight: 700; margin-bottom: 1rem; }
-        .glass-card p { color: var(--text-muted); font-size: 1.1rem; flex-grow: 1; }
-
-        /* Minimalist Tags */
-        .tag-list { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 2rem; }
-        .tag { border: 1px solid var(--border-subtle); padding: 6px 16px; border-radius: 50px; font-size: 0.85rem; color: var(--text-muted); background: rgba(0,0,0,0.3); }
-
-        /* Map Location List */
-        .loc-list { list-style: none; margin-top: 1rem; }
-        .loc-list li { padding: 12px 0; border-bottom: 1px solid var(--border-subtle); display: flex; justify-content: space-between; color: var(--text-muted); font-size: 0.95rem; }
-        .loc-list li span { color: var(--text-pure); font-weight: 500; }
-        .loc-list li:last-child { border-bottom: none; }
-
-        /* --- Minimal Footer --- */
-        .footer { border-top: 1px solid var(--border-subtle); padding: 6rem 0 3rem; text-align: center; }
-        .footer h2 { font-size: 3rem; margin-bottom: 2rem; }
+        .logo-box img { max-width: 100%; max-height: 100%; object-fit: contain; }
         
-        .social-links { display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap; margin-bottom: 4rem; }
-        .social-link {
-            width: 50px; height: 50px; border-radius: 50%;
-            border: 1px solid var(--border-subtle); display: flex; align-items: center; justify-content: center;
-            color: var(--text-pure); font-size: 1.2rem; text-decoration: none;
-            transition: all 0.3s ease; background: var(--bg-surface);
+        .card h3 { font-size: 1.8rem; font-weight: 800; color: var(--text-dark); margin-bottom: 1rem; }
+        .card p { color: var(--text-gray); font-size: 1.05rem; flex-grow: 1; margin-bottom: 1.5rem; }
+
+        /* Tags */
+        .tags { display: flex; flex-wrap: wrap; gap: 8px; }
+        .tag { padding: 6px 14px; border-radius: 50px; font-size: 0.85rem; font-weight: 700; }
+        .tag-orange { background: #FFF0ED; color: #FF6B6B; }
+        .tag-purple { background: #F9F0FF; color: #C471ED; }
+
+        /* --- Animated CSS Map Card --- */
+        .map-card { background: var(--text-dark); color: #fff; }
+        .map-card h3 { color: #fff; }
+        .map-card p { color: #94A3B8; }
+        
+        .map-visual {
+            position: relative; width: 100%; height: 180px; margin-top: 1rem;
+            background: rgba(255,255,255,0.03); border-radius: 20px; border: 1px solid rgba(255,255,255,0.1);
+            display: flex; align-items: center; justify-content: center;
         }
-        .social-link:hover { background: var(--text-pure); color: var(--bg-base); transform: scale(1.1); }
+        /* The KMP Highway Line */
+        .kmp-line { position: absolute; width: 80%; height: 4px; background: var(--grad-map); border-radius: 10px; transform: rotate(-10deg); }
+        
+        /* Map Pins */
+        .pin { position: absolute; display: flex; flex-direction: column; align-items: center; gap: 5px; }
+        .pin-dot { width: 14px; height: 14px; background: #92EFFD; border-radius: 50%; box-shadow: 0 0 15px #92EFFD; animation: pulseMap 2s infinite; }
+        .pin-label { font-size: 0.75rem; font-weight: 700; color: #fff; background: rgba(0,0,0,0.5); padding: 2px 8px; border-radius: 10px; }
+        
+        .pin-1 { top: 20%; left: 10%; } /* Sonipat */
+        .pin-2 { top: 40%; left: 40%; } /* Kharkhoda */
+        .pin-3 { top: 60%; left: 70%; } /* Bahadurgarh */
 
-        .copyright { color: var(--text-muted); font-size: 0.9rem; }
+        @keyframes pulseMap { 0% { box-shadow: 0 0 0 0 rgba(146, 239, 253, 0.6); } 70% { box-shadow: 0 0 0 15px rgba(146, 239, 253, 0); } 100% { box-shadow: 0 0 0 0 rgba(146, 239, 253, 0); } }
 
-        /* Mobile Menu Button */
-        .menu-btn { display: none; background: none; border: none; color: white; font-size: 1.2rem; cursor: pointer; }
+        /* --- Market Growth Graph Card --- */
+        .graph-card { background: var(--grad-graph); color: #fff; }
+        .graph-card h3 { color: #fff; }
+        .graph-card p { color: rgba(255,255,255,0.9); }
+        
+        .graph-visual {
+            display: flex; align-items: flex-end; justify-content: space-around; height: 120px;
+            margin-top: auto; padding: 20px; background: rgba(0,0,0,0.1); border-radius: 20px;
+        }
+        .g-bar { width: 18%; background: #fff; border-radius: 8px 8px 0 0; animation: graphUp 2s ease-out forwards; transform-origin: bottom; }
+        .gb-1 { height: 40%; } .gb-2 { height: 60%; animation-delay: 0.3s; } .gb-3 { height: 80%; animation-delay: 0.6s; } .gb-4 { height: 100%; animation-delay: 0.9s; }
+        
+        @keyframes graphUp { 0% { transform: scaleY(0); } 100% { transform: scaleY(1); } }
 
-        /* --- Responsive Design --- */
+        /* --- Footer --- */
+        .footer { background: #fff; text-align: center; padding: 5rem 0 3rem; margin-top: 4rem; }
+        .footer h2 { font-size: 2.5rem; font-weight: 800; margin-bottom: 2rem; }
+        .social-matrix { display: flex; justify-content: center; flex-wrap: wrap; gap: 1rem; margin-bottom: 3rem; }
+        
+        .social-btn {
+            width: 55px; height: 55px; border-radius: 50%; background: #F4F7F9; color: var(--text-dark);
+            display: flex; align-items: center; justify-content: center; font-size: 1.3rem;
+            text-decoration: none; transition: 0.3s; border: 1px solid rgba(0,0,0,0.05);
+        }
+        .social-btn:hover { background: var(--grad-estate); color: #fff; transform: translateY(-5px) rotate(360deg); border-color: transparent; }
+
+        .copyright { color: var(--text-gray); font-size: 0.9rem; }
+
+        /* Scroll Animations */
+        .reveal { opacity: 0; transform: translateY(40px); transition: 0.8s ease; }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+
+        /* --- Mobile Responsiveness --- */
         @media (max-width: 992px) {
-            .hero h1 { font-size: 4rem; }
-            .span-8, .span-4 { grid-column: span 12; }
+            .hero-grid { grid-template-columns: 1fr; text-align: center; }
+            .hero-visual { order: -1; margin-bottom: 2rem; }
+            .badge { margin: 0 auto 1.5rem; }
+            .type-box { justify-content: center; display: flex; }
+            .span-7, .span-5 { grid-column: span 12; }
         }
 
         @media (max-width: 768px) {
-            .nav-island { padding: 0.75rem 1.2rem; }
-            .nav-links { display: none; /* Add JS logic for mobile menu if needed */ }
-            .menu-btn { display: block; }
-            .btn-connect { display: none; }
+            .nav-inner { padding: 0 1rem; }
+            .menu-toggle { display: block; }
+            .nav-links {
+                position: fixed; top: 80px; left: -100%; width: 100%; height: calc(100vh - 80px);
+                background: #fff; flex-direction: column; justify-content: center; gap: 2rem;
+                transition: 0.4s;
+            }
+            .nav-links.active { left: 0; }
             .hero h1 { font-size: 3.2rem; }
+            .img-wrapper { width: 300px; height: 320px; }
+            .float-graph { left: 10px; bottom: -10px; }
             .section-title { font-size: 2.2rem; }
+            .card { padding: 1.8rem; }
         }
     </style>
 </head>
 <body>
 
-    <div class="ambient-bg"></div>
+    <!-- Colorful Aurora Background -->
+    <div class="aurora-bg">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
 
-    <header class="nav-container">
-        <nav class="nav-island">
-            <a href="#home" class="nav-logo">SAHIL<span>.</span></a>
-            <ul class="nav-links">
-                <li><a href="#ventures">Empire</a></li>
-                <li><a href="#territory">Territory</a></li>
-                <li><a href="#about">Philosophy</a></li>
+    <!-- Header -->
+    <header class="header">
+        <div class="container nav-inner">
+            <a href="#" class="logo">SAHIL<span>.</span></a>
+            <button class="menu-toggle" id="menu-btn"><i class="fa-solid fa-bars-staggered"></i></button>
+            <ul class="nav-links" id="nav-menu">
+                <li><a href="#ventures">The Empire</a></li>
+                <li><a href="#map">KMP Territory</a></li>
+                <li><a href="#growth">Market Growth</a></li>
+                <li><a href="#contact" class="btn-connect">Connect</a></li>
             </ul>
-            <a href="#contact" class="btn-connect">Connect</a>
-            <button class="menu-btn"><i class="fa-solid fa-bars"></i></button>
-        </nav>
+        </div>
     </header>
 
-    <section id="home" class="hero">
-        <div class="container">
-            <div class="badge">Sonipat • Haryana</div>
-            <h1>BUILDING <span class="outline">EMPIRES</span><br>IN REAL ESTATE</h1>
-            <p>I am Sahil Antil. Founder & CEO of Kavach Builders and Kavach Estate. Executing ultra-premium infrastructure and securing high-yield commercial lands across the KMP Belt.</p>
+    <!-- Hero Section -->
+    <section class="hero container">
+        <div class="hero-grid">
+            <div class="hero-content reveal">
+                <div class="badge">
+                    <div class="badge-dot"></div> Executing High-Yield Projects
+                </div>
+                <h1>Sahil Antil</h1>
+                <div class="type-box">Expert in <span id="typewriter"></span></div>
+                <p>I am a self-made infrastructure entrepreneur from Sonipat. As the Founder, CEO, and Director of <strong>Kavach Builders</strong> & <strong>Kavach Estate</strong>, I turn bold blueprints into concrete reality across Haryana.</p>
+                <a href="#ventures" class="btn-connect" style="padding: 14px 32px; font-size: 1.1rem; background: var(--grad-map); border: none;">Explore Ventures <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+            
+            <div class="hero-visual reveal">
+                <div class="img-wrapper">
+                    <!-- Original Image Retained -->
+                    <img src="sahil-photo.JPG" alt="Sahil Antil">
+                </div>
+                <!-- CSS Animated Graph -->
+                <div class="float-graph">
+                    <div class="f-bar fb-1"></div>
+                    <div class="f-bar fb-2"></div>
+                    <div class="f-bar fb-3"></div>
+                    <div class="f-bar fb-4"></div>
+                    <span style="font-weight:800; font-size:1.2rem; margin-left:8px; color:var(--text-dark);">KMP <i class="fa-solid fa-arrow-trend-up" style="color:#11998E;"></i></span>
+                </div>
+            </div>
         </div>
     </section>
 
+    <!-- The Empire Bento Grid -->
     <section id="ventures" class="container">
-        <h2 class="section-title">The <span>Ventures</span></h2>
+        <h2 class="section-title reveal">Corporate <span>Empire</span></h2>
         
-        <div class="bento-grid" id="cards-container">
+        <div class="bento-grid">
             
-            <div class="glass-card span-8">
-                <div class="card-content">
-                    <i class="fa-solid fa-helmet-safety card-icon"></i>
+            <!-- Kavach Builders Card (With Logo) -->
+            <div class="card span-7 reveal">
+                <div class="brand-header">
+                    <!-- Kavach Builders Logo Re-added -->
+                    <div class="logo-box"><img src="kavach_builders.png" alt="Kavach Builders Logo"></div>
                     <h3>Kavach Builders</h3>
-                    <p>Engineering perfection. We don't just lay bricks; we architect landmarks. From massive industrial warehouses to ultra-luxury villas and farmhouses, we handle end-to-end ground execution, interior design, and structural framing with absolute precision.</p>
-                    <div class="tag-list">
-                        <span class="tag">Luxury Villas</span>
-                        <span class="tag">Industrial Factories</span>
-                        <span class="tag">Warehouses</span>
-                        <span class="tag">Architecture</span>
+                </div>
+                <p>We don't just build, we engineer legacy. From massive heavy-duty industrial factories and warehouses to ultra-luxury villas and farmhouses. We execute complete architecture, interior, and exterior decoration with flawless precision.</p>
+                <div class="tags">
+                    <span class="tag tag-orange">Luxury Villas</span>
+                    <span class="tag tag-orange">Factories</span>
+                    <span class="tag tag-orange">Warehouses</span>
+                    <span class="tag tag-orange">Architecture</span>
+                </div>
+            </div>
+
+            <!-- CSS Animated Territory Map -->
+            <div class="card span-5 map-card reveal" id="map">
+                <h3><i class="fa-solid fa-satellite-dish" style="color: #92EFFD;"></i> Territory Map</h3>
+                <p>Commanding the deep roots of Sonipat, Kundli, and the entire KMP Belt.</p>
+                <div class="map-visual">
+                    <div class="kmp-line"></div>
+                    <div class="pin pin-1">
+                        <div class="pin-dot"></div><div class="pin-label">Sonipat</div>
+                    </div>
+                    <div class="pin pin-2">
+                        <div class="pin-dot"></div><div class="pin-label">Kharkhoda</div>
+                    </div>
+                    <div class="pin pin-3">
+                        <div class="pin-dot"></div><div class="pin-label">Jhajjar</div>
                     </div>
                 </div>
             </div>
 
-            <div class="glass-card span-4">
-                <div class="card-content">
-                    <i class="fa-brands fa-youtube card-icon"></i>
-                    <h3>Market Intelligence</h3>
-                    <p>Knowledge is the ultimate asset. I actively decode Govt. policies, KMP corridor updates, and infrastructure insights across my social platforms.</p>
-                    <a href="#contact" style="color: var(--accent-gold); text-decoration: none; margin-top: 1.5rem; font-weight: 600;">Watch Insights &rarr;</a>
+            <!-- CSS Animated Growth Graph -->
+            <div class="card span-5 graph-card reveal" id="growth">
+                <h3><i class="fa-solid fa-chart-pie"></i> Market Education</h3>
+                <p>Through active social media, I decode Govt. plans, upcoming infrastructure, and real estate hacks for informed investing.</p>
+                <div class="graph-visual">
+                    <div class="g-bar gb-1"></div>
+                    <div class="g-bar gb-2"></div>
+                    <div class="g-bar gb-3"></div>
+                    <div class="g-bar gb-4"></div>
                 </div>
             </div>
 
-            <div class="glass-card span-4" id="territory">
-                <div class="card-content">
-                    <i class="fa-solid fa-crosshairs card-icon"></i>
-                    <h3>Core Territory</h3>
-                    <p style="margin-bottom: 1rem;">Commanding the most lucrative development zones in Haryana.</p>
-                    <ul class="loc-list">
-                        <li>Sonipat & Kundli <span>Active</span></li>
-                        <li>Kharkhoda Zone <span>Active</span></li>
-                        <li>Gannaur & Gohana <span>Active</span></li>
-                        <li>Bahadurgarh <span>Expanding</span></li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="glass-card span-8">
-                <div class="card-content">
-                    <i class="fa-solid fa-building-columns card-icon"></i>
+            <!-- Kavach Estate Card (With Logo) -->
+            <div class="card span-7 reveal">
+                <div class="brand-header">
+                    <!-- Kavach Estate Logo Re-added -->
+                    <div class="logo-box"><img src="kavach_estate.png" alt="Kavach Estate Logo"></div>
                     <h3>Kavach Estate</h3>
-                    <p>Your institutional gateway to Haryana's real estate. We manage high-net-worth property acquisitions, agricultural land conversions, Free Zone industrial plots, and premium Commercial SCO deals. Transparent, legal, and highly profitable.</p>
-                    <div class="tag-list">
-                        <span class="tag">Commercial SCOs</span>
-                        <span class="tag">Industrial Plots</span>
-                        <span class="tag">Agricultural Land</span>
-                        <span class="tag">High-Yield Assets</span>
-                    </div>
+                </div>
+                <p>The ultimate gateway to high-yield properties in Haryana & Delhi-NCR. We secure premium deals in Commercial SCOs, Free Zone Industrial Land, Agricultural Plots, and Residential Colonies. Real estate backed by deep market intelligence.</p>
+                <div class="tags">
+                    <span class="tag tag-purple">Commercial SCO</span>
+                    <span class="tag tag-purple">Industrial Land</span>
+                    <span class="tag tag-purple">Free Zone</span>
+                    <span class="tag tag-purple">Agriculture</span>
                 </div>
             </div>
 
         </div>
     </section>
 
-    <section id="about" style="text-align: center; max-width: 800px; margin: 0 auto; padding: 4rem 2rem 8rem;">
-        <i class="fa-solid fa-quote-left" style="font-size: 3rem; color: var(--border-subtle); margin-bottom: 2rem;"></i>
-        <h3 style="font-size: 1.8rem; font-weight: 400; line-height: 1.6; color: var(--text-pure);">
-            "I believe in execution over conversation. Kavach Builders and Kavach Estate were built from the ground up to bring institutional transparency and world-class infrastructure to Haryana's real estate landscape."
-        </h3>
-        <p style="margin-top: 2rem; color: var(--accent-gold); font-weight: 600; letter-spacing: 1px; text-transform: uppercase;">— Sahil Antil</p>
-    </section>
-
-    <footer id="contact" class="footer">
+    <!-- Footer -->
+    <footer id="contact" class="footer reveal">
         <div class="container">
-            <h2>Initiate Contact</h2>
-            <p style="color: var(--text-muted); margin-bottom: 3rem; font-size: 1.1rem;">For strategic partnerships, real estate acquisitions, or construction inquiries.</p>
+            <h2>Let's Do Business</h2>
+            <p style="color: var(--text-gray); margin-bottom: 2rem; font-size: 1.1rem;">Connect for infrastructure development, high-ticket land deals, or property consultations.</p>
             
-            <div class="social-links">
-                <a href="https://linkedin.com/in/sahillantill" target="_blank" class="social-link"><i class="fa-brands fa-linkedin-in"></i></a>
-                <a href="https://x.com/sahillantill" target="_blank" class="social-link"><i class="fa-brands fa-x-twitter"></i></a>
-                <a href="https://www.instagram.com/sahillantill" target="_blank" class="social-link"><i class="fa-brands fa-instagram"></i></a>
-                <a href="https://www.youtube.com/sahilantil" target="_blank" class="social-link"><i class="fa-brands fa-youtube"></i></a>
-                <a href="https://www.threads.net/@sahillantill" target="_blank" class="social-link"><i class="fa-brands fa-threads"></i></a>
-                <a href="https://www.facebook.com/sahillantill" target="_blank" class="social-link"><i class="fa-brands fa-facebook-f"></i></a>
+            <div class="social-matrix">
+                <a href="https://linkedin.com/in/sahillantill" target="_blank" class="social-btn"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://x.com/sahillantill" target="_blank" class="social-btn"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="https://www.instagram.com/sahillantill" target="_blank" class="social-btn"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.youtube.com/sahilantil" target="_blank" class="social-btn"><i class="fa-brands fa-youtube"></i></a>
+                <a href="https://www.facebook.com/sahillantill" target="_blank" class="social-btn"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://www.reddit.com/user/sahillantill" target="_blank" class="social-btn"><i class="fa-brands fa-reddit-alien"></i></a>
             </div>
 
-            <p class="copyright">&copy; 2026 Sahil Antil. Kavach Builders & Kavach Estate.</p>
+            <p class="copyright">&copy; 2026 Sahil Antil. Founder & CEO of Kavach Builders & Kavach Estate.</p>
         </div>
     </footer>
 
+    <!-- Scripts for Logic & Animations -->
     <script>
-        document.getElementById("cards-container").onmousemove = e => {
-            for(const card of document.getElementsByClassName("glass-card")) {
-                const rect = card.getBoundingClientRect(),
-                      x = e.clientX - rect.left,
-                      y = e.clientY - rect.top;
+        // 1. Mobile Menu Toggle Logic
+        const menuBtn = document.getElementById('menu-btn');
+        const navMenu = document.getElementById('nav-menu');
+        const navLinks = navMenu.querySelectorAll('a');
 
-                card.style.setProperty("--mouse-x", `${x}px`);
-                card.style.setProperty("--mouse-y", `${y}px`);
+        menuBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            const icon = menuBtn.querySelector('i');
+            if(navMenu.classList.contains('active')) {
+                icon.classList.replace('fa-bars-staggered', 'fa-xmark');
+            } else {
+                icon.classList.replace('fa-xmark', 'fa-bars-staggered');
             }
-        };
+        });
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                menuBtn.querySelector('i').classList.replace('fa-xmark', 'fa-bars-staggered');
+            });
+        });
+
+        // 2. CSS Scroll Reveal Animation
+        function revealElements() {
+            const reveals = document.querySelectorAll('.reveal');
+            for (let i = 0; i < reveals.length; i++) {
+                const windowHeight = window.innerHeight;
+                const elementTop = reveals[i].getBoundingClientRect().top;
+                const elementVisible = 100;
+
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add('active');
+                }
+            }
+        }
+        window.addEventListener('scroll', revealElements);
+        revealElements(); // Run on load
+
+        // 3. Typing Effect
+        const words = ["Luxury Construction.", "KMP Land Deals.", "Industrial Setup.", "Real Estate Analytics."];
+        let i = 0, timer;
+        const typeTarget = document.getElementById('typewriter');
+
+        function typingEffect() {
+            let word = words[i].split("");
+            var loopTyping = function() {
+                if (word.length > 0) {
+                    typeTarget.innerHTML += word.shift();
+                } else {
+                    setTimeout(deletingEffect, 2000);
+                    return false;
+                };
+                timer = setTimeout(loopTyping, 100);
+            };
+            loopTyping();
+        }
+
+        function deletingEffect() {
+            let word = words[i].split("");
+            var loopDeleting = function() {
+                if (word.length > 0) {
+                    word.pop();
+                    typeTarget.innerHTML = word.join("");
+                } else {
+                    if (words.length > (i + 1)) { i++; } else { i = 0; }
+                    typingEffect();
+                    return false;
+                };
+                timer = setTimeout(loopDeleting, 50);
+            };
+            loopDeleting();
+        }
+
+        window.onload = function() { setTimeout(typingEffect, 500); };
     </script>
 </body>
 </html>
