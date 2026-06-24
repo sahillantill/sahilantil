@@ -23,8 +23,8 @@
         :root {
             --bg-body: #F4F7F9; 
             --bg-card: #FFFFFF;
-            --text-dark: #202124; /* Google standard dark */
-            --text-gray: #5F6368; /* Google standard gray */
+            --text-dark: #202124; 
+            --text-gray: #5F6368; 
             
             /* Gradients */
             --grad-builders: linear-gradient(135deg, #FF6B6B 0%, #FF8E53 100%); 
@@ -62,39 +62,37 @@
         /* Typography single line enforcer for headings */
         .single-line { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 
-        /* --- LIQUID GLASS NAVBAR (No Border, Centered Menu, 5 Socials) --- */
+        /* --- LIQUID GLASS NAVBAR (Fix for overflow) --- */
         .nav-wrapper {
             position: fixed; top: 20px; left: 0; width: 100%; z-index: 1000;
-            display: flex; justify-content: center; pointer-events: none; padding: 0 1rem;
+            display: flex; justify-content: center; pointer-events: none; padding: 0 1.5rem;
         }
         .header {
             background: rgba(255, 255, 255, 0.25);
             backdrop-filter: blur(25px) saturate(150%);
             -webkit-backdrop-filter: blur(25px) saturate(150%);
-            border: none; /* Border Removed */
+            border: none;
             border-radius: 100px;
-            padding: 0.6rem 1.2rem 0.6rem 2rem; 
+            padding: 0.5rem 1rem 0.5rem 1.5rem; 
             display: flex; justify-content: space-between; align-items: center;
-            width: 100%; max-width: 1200px; 
+            width: 100%; max-width: 1100px; 
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
             pointer-events: auto; transition: all 0.3s ease;
         }
         
-        /* Nav Flex Layout: Logo (Left), Menu (Center), Socials (Right) */
         .nav-left { flex: 1; display: flex; justify-content: flex-start; align-items: center; }
         .nav-center { flex: 2; display: flex; justify-content: center; align-items: center; }
-        .nav-right { flex: 1; display: flex; justify-content: flex-end; align-items: center; gap: 10px; }
+        .nav-right { flex: 1; display: flex; justify-content: flex-end; align-items: center; gap: 8px; }
 
         .logo { font-size: 1.4rem; font-weight: 900; color: var(--text-dark); text-decoration: none !important; letter-spacing: -0.5px; }
         
-        .nav-links { display: flex; gap: 2rem; list-style: none; margin: 0; padding: 0; }
-        .nav-links a { color: var(--text-dark); font-weight: 500; text-decoration: none !important; font-size: 0.95rem; transition: color 0.3s ease; letter-spacing: 0.2px; }
+        .nav-links { display: flex; gap: 1.5rem; list-style: none; margin: 0; padding: 0; }
+        .nav-links a { color: var(--text-dark); font-weight: 600; text-decoration: none !important; font-size: 0.95rem; transition: color 0.3s ease; white-space: nowrap; }
         .nav-links a:hover { color: #FF6B6B; }
         
-        /* 5 Colorful Socials in Navbar */
         .nav-social-btn {
-            width: 38px; height: 38px; border-radius: 50%; display: flex; align-items: center; justify-content: center;
-            color: #fff; text-decoration: none; font-size: 1.1rem; transition: 0.3s; box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center;
+            color: #fff; text-decoration: none; font-size: 1rem; transition: 0.3s; box-shadow: 0 4px 10px rgba(0,0,0,0.1);
         }
         .nav-social-btn:hover { transform: translateY(-3px) scale(1.1); box-shadow: 0 8px 15px rgba(0,0,0,0.2); }
         
@@ -105,6 +103,17 @@
         .c-fb { background: #1877F2; }
 
         .menu-toggle { display: none; background: none; border: none; font-size: 1.5rem; cursor: pointer; color: var(--text-dark); }
+
+        /* Full Screen Mobile Menu Overlay */
+        .mobile-menu-overlay {
+            position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
+            background: rgba(255,255,255,0.95); backdrop-filter: blur(25px);
+            flex-direction: column; justify-content: center; align-items: center; gap: 2rem; 
+            transition: all 0.4s ease; opacity: 0; visibility: hidden; z-index: 999; display: none;
+        }
+        .mobile-menu-overlay.active { opacity: 1; visibility: visible; }
+        .mobile-menu-overlay a { font-size: 1.6rem; font-weight: 700; color: var(--text-dark); text-decoration: none; }
+        .mobile-socials { display: flex; gap: 15px; margin-top: 2rem; }
 
         /* --- Hero Section --- */
         .hero { min-height: 100vh; display: flex; align-items: center; padding-top: 6rem; }
@@ -122,7 +131,7 @@
             box-shadow: var(--shadow-float); z-index: 2; transform: rotate(2deg); transition: all 0.5s ease;
         }
         .img-wrapper:hover { transform: rotate(0deg) scale(1.03); }
-        .img-wrapper img { width: 100%; height: 100%; object-fit: cover; border-radius: 30px; } /* Rounded Photo Edges */
+        .img-wrapper img { width: 100%; height: 100%; object-fit: cover; border-radius: 30px; }
 
         /* --- Showcase Panels (Startups) --- */
         .section-title { font-size: clamp(2.5rem, 4vw, 3.2rem); font-weight: 900; text-align: center; margin-bottom: 4rem; letter-spacing: -1px; color: var(--text-dark); }
@@ -141,22 +150,21 @@
 
         .tags-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
         .showcase-tag {
-            display: flex; align-items: center; gap: 10px; padding: 12px 16px; border-radius: 16px;
+            display: flex; align-items: center; gap: 10px; padding: 12px 16px; border-radius: 12px; /* Slight square look */
             font-weight: 700; font-size: 0.95rem; background: #fff; box-shadow: 0 4px 15px rgba(0,0,0,0.03);
             white-space: nowrap;
         }
 
         .panel-graphic { position: relative; height: 100%; min-height: 350px; border-radius: 30px; display: flex; align-items: center; justify-content: center; overflow: hidden; }
-        /* Edges Rounded according to section */
-        .huge-brand-logo { width: 90%; max-width: 320px; object-fit: contain; border-radius: 20px; filter: drop-shadow(0 20px 30px rgba(0,0,0,0.1)); transition: transform 0.5s ease; }
+        .huge-brand-logo { width: 90%; max-width: 320px; object-fit: contain; border-radius: 24px; filter: drop-shadow(0 20px 30px rgba(0,0,0,0.1)); transition: transform 0.5s ease; }
         .showcase-panel:hover .huge-brand-logo { transform: scale(1.05); }
 
-        /* --- Map & 3D Pie Chart Grid --- */
+        /* --- Map & Pie Chart Grid --- */
         .secondary-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin-top: 3rem; }
         .mini-card { background: rgba(255,255,255,0.8); backdrop-filter: blur(15px); border-radius: 32px; padding: 3rem; box-shadow: var(--shadow-soft); display: flex; flex-direction: column; border: 1px solid rgba(255,255,255,0.9); }
         .mini-card h3 { font-size: clamp(1.5rem, 2.5vw, 1.8rem); font-weight: 800; margin-bottom: 0.5rem; }
         
-        /* Working Area Map */
+        /* Working Area Map - SQUARE PINS */
         .map-visual {
             position: relative; width: 100%; height: 260px; margin-top: 2rem;
             background: #202124; border-radius: 24px; display: flex; align-items: center; justify-content: center; overflow: hidden;
@@ -166,7 +174,9 @@
         .kmp-line { position: absolute; width: 85%; height: 3px; background: rgba(255,255,255,0.2); border-radius: 10px; transform: rotate(-15deg); z-index: 2; }
         .pin { position: absolute; display: flex; flex-direction: column; align-items: center; gap: 4px; z-index: 3; }
         .pin-dot { width: 12px; height: 12px; background: #92EFFD; border-radius: 50%; box-shadow: 0 0 15px #92EFFD; animation: pulseMap 2s infinite; }
-        .pin-label { font-size: 0.7rem; font-weight: 700; color: #fff; background: rgba(0,0,0,0.8); padding: 3px 8px; border-radius: 10px; white-space: nowrap; }
+        
+        /* SQUARE EDGES APPLIED HERE */
+        .pin-label { font-size: 0.7rem; font-weight: 700; color: #fff; background: rgba(0,0,0,0.85); padding: 4px 8px; border-radius: 3px; border: 1px solid rgba(146,239,253,0.4); white-space: nowrap; text-transform: uppercase; letter-spacing: 0.5px; }
         
         .pin-gohana { top: 15%; left: 15%; }
         .pin-ganaur { top: 20%; left: 75%; }
@@ -177,19 +187,14 @@
 
         @keyframes pulseMap { 0% { box-shadow: 0 0 0 0 rgba(146, 239, 253, 0.6); } 70% { box-shadow: 0 0 0 15px rgba(146, 239, 253, 0); } 100% { box-shadow: 0 0 0 0 rgba(146, 239, 253, 0); } }
 
-        /* 3D Animated Pie Chart (Market Analytics) */
+        /* FIXED PIE CHART (Clean 2.5D Layered Look without Bugs) */
         .pie-visual {
             display: flex; justify-content: center; align-items: center; gap: 2rem;
             margin-top: 2rem; padding: 25px; background: #fff; border-radius: 24px; border: 1px solid rgba(0,0,0,0.05);
         }
         
-        /* 3D Effect Container */
-        .chart-3d-container {
-            perspective: 1000px;
-        }
         .donut-chart {
-            width: 140px; height: 140px; border-radius: 50%; position: relative;
-            /* 5 Categories: Industrial(30%), Commercial(25%), Residential(20%), Agriculture(15%), Free Zone(10%) */
+            width: 150px; height: 150px; border-radius: 50%; position: relative;
             background: conic-gradient(
                 #12C2E9 0% 30%, 
                 #C471ED 30% 55%, 
@@ -198,36 +203,29 @@
                 #FFD93D 90% 100%
             );
             display: flex; align-items: center; justify-content: center;
-            /* 3D Transform & Box Shadow */
-            transform: rotateX(55deg) rotateZ(-30deg);
-            transform-style: preserve-3d;
-            box-shadow: 
-                0 5px 0 #0d96b5, 
-                -2px 8px 0 #9b58bc, 
-                0 15px 20px rgba(0,0,0,0.3);
-            animation: spin3D 2s cubic-bezier(0.1, 0.7, 0.1, 1);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+            transition: transform 0.4s ease;
         }
+        .donut-chart:hover { transform: scale(1.05); }
+
         .donut-hole {
-            width: 70px; height: 70px; background: #fff; border-radius: 50%; 
+            width: 90px; height: 90px; background: #fff; border-radius: 50%; 
             display: flex; flex-direction: column; align-items: center; justify-content: center; 
-            box-shadow: inset 0 5px 10px rgba(0,0,0,0.2);
-            /* Counter-rotate text to keep it flat */
-            transform: rotateZ(30deg) rotateX(-55deg);
+            box-shadow: inset 0 4px 8px rgba(0,0,0,0.1);
         }
-        @keyframes spin3D { 0% { transform: rotateX(0deg) rotateZ(0deg) scale(0); opacity: 0; } 100% { transform: rotateX(55deg) rotateZ(-30deg) scale(1); opacity: 1; } }
         
         .chart-legend { display: flex; flex-direction: column; gap: 8px; }
         .legend-item { display: flex; align-items: center; gap: 8px; font-size: 0.85rem; font-weight: 700; color: var(--text-dark); white-space: nowrap; }
-        .l-dot { width: 12px; height: 12px; border-radius: 50%; }
+        .l-dot { width: 12px; height: 12px; border-radius: 3px; } /* Square dots for legend */
 
         /* --- Proper Glassmorphism FAQ Section --- */
         .faq-glass-wrapper {
             max-width: 900px; margin: 0 auto;
             background: rgba(255, 255, 255, 0.4); backdrop-filter: blur(25px); -webkit-backdrop-filter: blur(25px);
             border-radius: 40px; padding: 4rem; border: 1px solid rgba(255, 255, 255, 0.6);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.05); text-align: center;
         }
-        .faq-item { background: #fff; border-radius: 16px; margin-bottom: 1rem; box-shadow: var(--shadow-soft); overflow: hidden; border: 1px solid rgba(0,0,0,0.02); }
+        .faq-item { background: #fff; border-radius: 12px; margin-bottom: 1rem; box-shadow: var(--shadow-soft); overflow: hidden; border: 1px solid rgba(0,0,0,0.02); text-align: left; }
         .faq-question { padding: 1.5rem 2rem; font-weight: 700; font-size: 1.05rem; display: flex; justify-content: space-between; align-items: center; cursor: pointer; color: var(--text-dark); }
         .faq-answer { padding: 0 2rem; max-height: 0; overflow: hidden; transition: max-height 0.3s ease; color: var(--text-gray); }
         .faq-item.active .faq-answer { padding-bottom: 1.5rem; max-height: 200px; }
@@ -255,35 +253,21 @@
         .reveal { opacity: 0; transform: translateY(30px); transition: 0.8s ease; }
         .reveal.active { opacity: 1; transform: translateY(0); }
 
-        /* --- Mobile Responsiveness --- */
+        /* --- Mobile Responsiveness (Fixed Navbar Breaking) --- */
         @media (max-width: 992px) {
+            .nav-center, .nav-right { display: none; } /* Hide menu and extra socials on tablet */
+            .menu-toggle { display: block; }
+            .mobile-menu-overlay { display: flex; } /* Enable overlay logic for mobile */
             .hero-grid { grid-template-columns: 1fr; text-align: center; }
             .hero-visual { order: -1; margin-bottom: 2rem; }
             .type-box { justify-content: center; display: flex; }
             .showcase-panel { grid-template-columns: 1fr; padding: 3rem; gap: 2rem; }
             .huge-brand-logo { width: 50%; }
             .secondary-grid { grid-template-columns: 1fr; }
-            .nav-right { display: none; } /* Hide right socials on tablet, show in menu */
         }
 
         @media (max-width: 768px) {
-            .nav-wrapper { padding: 0 15px; }
-            .header { padding: 0.6rem 1.2rem; background: rgba(255,255,255,0.5); }
-            .nav-center, .nav-right { display: none; } /* Hide on mobile */
-            .menu-toggle { display: block; }
-            
-            /* Full Screen Mobile Menu */
-            .mobile-menu-overlay {
-                position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
-                background: rgba(255,255,255,0.95); backdrop-filter: blur(25px);
-                flex-direction: column; justify-content: center; align-items: center; gap: 2rem; 
-                transition: all 0.4s ease; opacity: 0; visibility: hidden; z-index: 999; display: flex;
-            }
-            .mobile-menu-overlay.active { opacity: 1; visibility: visible; }
-            .mobile-menu-overlay a { font-size: 1.6rem; font-weight: 700; color: var(--text-dark); text-decoration: none; }
-            
-            .mobile-socials { display: flex; gap: 15px; margin-top: 2rem; }
-            
+            .header { padding: 0.5rem 1rem; }
             .img-wrapper { width: 300px; height: 320px; margin: 0 auto; border-radius: 30px; }
             .showcase-panel { padding: 2.5rem 1.5rem; border-radius: 30px; }
             .tags-grid { grid-template-columns: 1fr; }
@@ -301,7 +285,7 @@
         <div class="blob blob-3"></div>
     </div>
 
-    <!-- Liquid Glass Navbar (Centered Links, Original 5 Socials) -->
+    <!-- Liquid Glass Navbar (Bug Fixed for 992px+ Overflow) -->
     <div class="nav-wrapper">
         <header class="header">
             <!-- Left: Logo -->
@@ -354,10 +338,9 @@
     <section id="home" class="hero container">
         <div class="hero-grid">
             <div class="hero-content reveal" id="about">
-                <div class="badge">
-                    <div class="badge-dot"></div> Executing High-Yield Projects
+                <div class="badge" style="display:inline-flex; align-items:center; gap:10px; padding:8px 18px; border-radius:50px; background:rgba(255,255,255,0.6); backdrop-filter:blur(10px); box-shadow:var(--shadow-soft); font-weight:700; font-size:0.9rem; margin-bottom:1.8rem; border:1px solid rgba(255,255,255,0.8);">
+                    <div class="badge-dot" style="width:10px; height:10px; background:#FF6B6B; border-radius:50%; animation:pulseBadge 2s infinite;"></div> Executing High-Yield Projects
                 </div>
-                <!-- Google Style Single Line Enforcement via Clamp/Nowrap -->
                 <h1 class="single-line">Sahil Antil</h1>
                 <div class="type-box">Expert in <span id="typewriter"></span></div>
                 <p>I am a self-made infrastructure entrepreneur from Sonipat. As the Founder, CEO, and Director of <strong>Kavach Builders</strong> & <strong>Kavach Estate</strong>, I turn bold blueprints into concrete reality across Delhi NCR and Haryana.</p>
@@ -366,7 +349,6 @@
             
             <div class="hero-visual reveal">
                 <div class="img-wrapper">
-                    <!-- Edges rounded via wrapper -->
                     <img src="sahil-photo.JPG" alt="Sahil Antil Real Estate Tycoon">
                 </div>
             </div>
@@ -392,7 +374,7 @@
                     </div>
                 </div>
                 <div class="panel-graphic">
-                    <!-- Rounded Logo to match Section -->
+                    <!-- Rounded Edge Logo -->
                     <img src="kavach_builders.png" alt="Kavach Builders Logo" class="huge-brand-logo">
                 </div>
             </div>
@@ -410,14 +392,14 @@
                     </div>
                 </div>
                 <div class="panel-graphic" style="direction: ltr;">
-                    <!-- Rounded Logo to match Section -->
+                    <!-- Rounded Edge Logo -->
                     <img src="kavach_estate.png" alt="Kavach Estate Logo" class="huge-brand-logo">
                 </div>
             </div>
 
         </div>
 
-        <!-- Working Area & 3D Pie Chart Grid -->
+        <!-- Working Area & Pie Chart Grid -->
         <div class="secondary-grid">
             <!-- Working Area Map Card -->
             <div class="mini-card reveal">
@@ -425,6 +407,7 @@
                 <p style="color: var(--text-gray);">Commanding the core development zones.</p>
                 <div class="map-visual">
                     <div class="kmp-line"></div>
+                    <!-- Square Edge Labels via CSS -->
                     <div class="pin pin-gohana"><div class="pin-dot"></div><div class="pin-label">Gohana</div></div>
                     <div class="pin pin-ganaur"><div class="pin-dot"></div><div class="pin-label">Ganaur</div></div>
                     <div class="pin pin-kharkhoda"><div class="pin-dot"></div><div class="pin-label">Kharkhoda</div></div>
@@ -434,21 +417,19 @@
                 </div>
             </div>
 
-            <!-- 3D Style Animated Pie Chart -->
+            <!-- Clean Bug-Free Pie Chart -->
             <div class="mini-card reveal">
                 <h3 class="single-line"><i class="fa-solid fa-chart-pie" style="color: #12C2E9;"></i> Market Analytics</h3>
                 <p style="color: var(--text-gray);">Area distribution and sector investment metrics.</p>
                 <div class="pie-visual">
-                    <!-- 3D Pie Graphic -->
-                    <div class="chart-3d-container">
-                        <div class="donut-chart">
-                            <div class="donut-hole">
-                                <span style="font-size:1.1rem; font-weight:900; color:var(--text-dark); line-height:1;">100%</span>
-                                <span style="font-size:0.6rem; color:var(--text-gray); font-weight:700;">Coverage</span>
-                            </div>
+                    <!-- Clean Donut Graphic -->
+                    <div class="donut-chart">
+                        <div class="donut-hole">
+                            <span style="font-size:1.2rem; font-weight:900; color:var(--text-dark); line-height:1;">100%</span>
+                            <span style="font-size:0.6rem; color:var(--text-gray); font-weight:700;">Coverage</span>
                         </div>
                     </div>
-                    <!-- Legend -->
+                    <!-- Legend with Square Dots -->
                     <div class="chart-legend">
                         <div class="legend-item"><div class="l-dot" style="background:#12C2E9;"></div> Industrial (30%)</div>
                         <div class="legend-item"><div class="l-dot" style="background:#C471ED;"></div> Commercial (25%)</div>
@@ -463,8 +444,10 @@
 
     <!-- Glassmorphism FAQ Section -->
     <section id="faq" class="container reveal">
-        <h2 class="section-title single-line">General FAQ</h2>
         <div class="faq-glass-wrapper">
+            <!-- Heading Shifted Inside the Box -->
+            <h2 class="section-title single-line" style="margin-bottom: 2rem;">General FAQ</h2>
+            
             <div class="faq-item">
                 <div class="faq-question">What areas does Kavach Estate cover? <i class="fa-solid fa-chevron-down"></i></div>
                 <div class="faq-answer"><p>We deeply cover Sonipat Kundli, Kharkhoda, Gohana, Ganaur, Jhajjar (Bahadurgarh) and the broader Delhi NCR region, specifically focusing on the high-growth KMP belt.</p></div>
