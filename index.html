@@ -10,7 +10,7 @@
     <meta name="keywords" content="Sahil Antil, Kavach Builders, Kavach Estate, Sonipat Kundli, Kharkhoda, Jhajjar Real Estate, Delhi NCR Infrastructure">
     <meta name="author" content="Sahil Antil">
 
-    <!-- Google Fonts: Roboto -->
+    <!-- Google Fonts: Roboto (Classic Google Style) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
@@ -37,12 +37,16 @@
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        html { scroll-behavior: smooth; overflow-x: hidden; scroll-padding-top: 100px; }
+        
+        /* SCROLLING BUG FIX: Removed overflow-x from html to allow native momentum scrolling on mobile */
+        html { scroll-behavior: smooth; scroll-padding-top: 120px; }
         
         body { 
             font-family: var(--font-main); background-color: var(--bg-body); 
-            color: var(--text-dark); overflow-x: hidden; line-height: 1.6; 
+            color: var(--text-dark); line-height: 1.6; 
             -webkit-font-smoothing: antialiased;
+            /* Allow smooth flick scrolling on iOS & Android */
+            width: 100%; overflow-x: hidden; -webkit-overflow-scrolling: touch; 
         }
 
         /* Ambient Background */
@@ -101,7 +105,7 @@
 
         .menu-toggle { display: none; background: none; border: none; font-size: 1.5rem; cursor: pointer; color: var(--text-dark); }
 
-        /* Full Screen Mobile Menu */
+        /* Full Screen Mobile Menu Overlay */
         .mobile-menu-overlay {
             position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
             background: rgba(255,255,255,0.95); backdrop-filter: blur(25px);
@@ -109,8 +113,11 @@
             transition: all 0.4s ease; opacity: 0; visibility: hidden; z-index: 999; display: none;
         }
         .mobile-menu-overlay.active { opacity: 1; visibility: visible; }
-        .mobile-menu-overlay a { font-size: 1.5rem; font-weight: 700; color: var(--text-dark); text-decoration: none; }
+        .mobile-menu-overlay a { font-size: 1.6rem; font-weight: 700; color: var(--text-dark); text-decoration: none; }
+        
+        /* Fixed Mobile Social Icons - Scaled and properly styled */
         .mobile-socials { display: flex; gap: 15px; margin-top: 2rem; }
+        .mobile-socials .nav-social-btn { width: 45px; height: 45px; font-size: 1.3rem; }
 
         /* --- Hero Section --- */
         .hero { min-height: 100vh; display: flex; align-items: center; padding-top: 6rem; }
@@ -152,7 +159,6 @@
             font-weight: 700; font-size: 0.95rem; background: #fff; box-shadow: 0 4px 15px rgba(0,0,0,0.03); white-space: nowrap;
         }
 
-        /* Buttons for Ventures */
         .btn-venture {
             display: inline-flex; align-items: center; gap: 8px; padding: 12px 24px; border-radius: 50px; 
             font-weight: 700; font-size: 1rem; text-decoration: none; transition: all 0.3s ease; border: 2px solid transparent;
@@ -190,7 +196,6 @@
         .kmp-line { position: absolute; width: 85%; height: 3px; background: rgba(255,255,255,0.15); border-radius: 10px; transform: rotate(-15deg); z-index: 2; }
         .pin { position: absolute; display: flex; flex-direction: column; align-items: center; gap: 4px; z-index: 3; }
         
-        /* SQUARE PINS */
         .pin-dot { width: 10px; height: 10px; background: #92EFFD; border-radius: 2px; box-shadow: 0 0 10px #92EFFD; animation: pulseMap 2s infinite; }
         .pin-label { font-size: 0.65rem; font-weight: 700; color: #fff; background: rgba(0,0,0,0.8); padding: 3px 6px; border-radius: 4px; border: 1px solid rgba(146,239,253,0.3); white-space: nowrap; text-transform: uppercase; letter-spacing: 0.5px; }
         
@@ -259,7 +264,7 @@
         .reveal { opacity: 0; transform: translateY(30px); transition: 0.8s ease; }
         .reveal.active { opacity: 1; transform: translateY(0); }
 
-        /* --- MOBILE RESPONSIVENESS FIXES (100% Focused) --- */
+        /* --- MOBILE RESPONSIVENESS FIXES --- */
         @media (max-width: 992px) {
             .nav-right, .nav-center { display: none; } 
             .menu-toggle { display: block; }
@@ -274,7 +279,7 @@
 
         @media (max-width: 768px) {
             section { padding: 4rem 0; }
-            .container { padding: 0 1.2rem; } /* Removed double padding */
+            .container { padding: 0 1.2rem; } 
             
             .header { padding: 0.5rem 1rem; border-radius: 50px; }
             .hero { min-height: auto; padding-top: 8rem; padding-bottom: 2rem; }
@@ -343,7 +348,7 @@
                 </ul>
             </div>
             
-            <!-- Right: 5 Original Colorful Socials -->
+            <!-- Right: Original Colorful Socials -->
             <div class="nav-right">
                 <a href="https://linkedin.com/in/sahillantill" target="_blank" class="nav-social-btn c-ln"><i class="fa-brands fa-linkedin-in"></i></a>
                 <a href="https://www.instagram.com/sahillantill" target="_blank" class="nav-social-btn c-ig"><i class="fa-brands fa-instagram"></i></a>
@@ -364,6 +369,8 @@
         <a href="#startups" class="mobile-link">Startups</a>
         <a href="#faq" class="mobile-link">FAQ</a>
         <a href="#contact" class="mobile-link">Contact Us</a>
+        
+        <!-- Fixed Mobile Social Icons -->
         <div class="mobile-socials">
             <a href="https://linkedin.com/in/sahillantill" class="nav-social-btn c-ln"><i class="fa-brands fa-linkedin-in"></i></a>
             <a href="https://www.instagram.com/sahillantill" class="nav-social-btn c-ig"><i class="fa-brands fa-instagram"></i></a>
@@ -545,7 +552,7 @@
                 document.body.style.overflow = 'hidden'; 
             } else {
                 icon.classList.replace('fa-xmark', 'fa-bars-staggered');
-                document.body.style.overflow = 'auto'; 
+                document.body.style.overflow = ''; 
             }
         });
 
@@ -553,7 +560,7 @@
             link.addEventListener('click', () => {
                 mobileMenu.classList.remove('active');
                 menuBtn.querySelector('i').classList.replace('fa-xmark', 'fa-bars-staggered');
-                document.body.style.overflow = 'auto';
+                document.body.style.overflow = '';
             });
         });
 
