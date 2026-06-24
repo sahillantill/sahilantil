@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- AI & Advanced SEO Tags -->
-    <title>Sahil Antil | Modern Real Estate & Infrastructure Entrepreneur</title>
-    <meta name="description" content="Sahil Antil is the Founder & CEO of Kavach Builders and Kavach Estate. Explore vibrant infrastructure projects, portfolio growth, and market insights.">
-    <meta name="keywords" content="Sahil Antil, Kavach Builders, Kavach Estate, Sonipat Real Estate Map, Haryana Infrastructure Tycoon">
+    <title>Sahil Antil | Modern Real Estate & Infrastructure Tycoon</title>
+    <meta name="description" content="Sahil Antil is the Founder & CEO of Kavach Builders and Kavach Estate. Explore vibrant infrastructure projects, market analytics, and KMP territory maps.">
+    <meta name="keywords" content="Sahil Antil, Kavach Builders, Kavach Estate, Sonipat Kundli, Kharkhoda, Jhajjar Real Estate, Delhi NCR Infrastructure">
     <meta name="author" content="Sahil Antil">
 
     <!-- Google Fonts -->
@@ -23,7 +23,6 @@
         :root {
             --bg-body: #F4F7F9; 
             --bg-card: #FFFFFF;
-            
             --text-dark: #0F172A;
             --text-gray: #64748B;
             
@@ -31,17 +30,15 @@
             --grad-builders: linear-gradient(135deg, #FF6B6B 0%, #FF8E53 100%); 
             --grad-estate: linear-gradient(135deg, #12C2E9 0%, #C471ED 50%, #F64F59 100%); 
             --grad-map: linear-gradient(135deg, #4E65FF 0%, #92EFFD 100%); 
-            --grad-graph: linear-gradient(135deg, #11998E 0%, #38EF7D 100%); 
             
-            --shadow-float: 0 15px 35px rgba(0, 0, 0, 0.06);
-            --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.03);
+            --shadow-float: 0 15px 35px rgba(0, 0, 0, 0.08);
+            --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.04);
             --shadow-hover: 0 20px 40px rgba(0, 0, 0, 0.08);
             
             --font-main: 'Plus Jakarta Sans', sans-serif;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        
         html { scroll-behavior: smooth; overflow-x: hidden; scroll-padding-top: 120px; }
         
         body { 
@@ -50,57 +47,68 @@
             -webkit-font-smoothing: antialiased;
         }
 
-        /* Ambient Aurora Background */
+        /* Ambient Background */
         .aurora-bg {
-            position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: -1; pointer-events: none;
-            background: #F4F7F9;
+            position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: -1; pointer-events: none; background: #F4F7F9;
         }
         .blob { position: absolute; filter: blur(90px); opacity: 0.3; border-radius: 50%; animation: floatBg 15s infinite alternate ease-in-out; }
         .blob-1 { top: -10%; left: -10%; width: 50vw; height: 50vw; background: #FF6B6B; }
         .blob-2 { bottom: -10%; right: -10%; width: 60vw; height: 60vw; background: #92EFFD; animation-delay: -5s; }
         .blob-3 { top: 40%; left: 30%; width: 40vw; height: 40vw; background: #C471ED; animation-delay: -10s; }
-
         @keyframes floatBg { 0% { transform: translate(0,0) scale(1); } 100% { transform: translate(30px, 30px) scale(1.05); } }
 
         .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
         section { padding: 6rem 0; }
 
-        /* --- Floating Search-Bar Style Navbar (Perfectly Fixed) --- */
+        /* --- LIQUID GLASS NAVBAR --- */
         .nav-wrapper {
             position: fixed; top: 20px; left: 0; width: 100%; z-index: 1000;
-            display: flex; justify-content: center; pointer-events: none;
-            padding: 0 20px;
+            display: flex; justify-content: center; pointer-events: none; padding: 0 1rem;
         }
         .header {
-            background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
-            border: 1px solid rgba(0, 0, 0, 0.05); border-radius: 100px;
-            padding: 0.7rem 1.5rem 0.7rem 2rem; display: flex; justify-content: space-between; align-items: center;
-            width: 100%; max-width: 950px; box-shadow: 0 10px 40px rgba(0,0,0,0.06);
+            /* Ultra Premium Liquid Glass Effect */
+            background: rgba(255, 255, 255, 0.25);
+            backdrop-filter: blur(25px) saturate(150%);
+            -webkit-backdrop-filter: blur(25px) saturate(150%);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            border-radius: 100px;
+            padding: 0.7rem 1.5rem 0.7rem 2rem; 
+            display: flex; justify-content: space-between; align-items: center;
+            width: 100%; max-width: 1150px; 
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08), inset 0 0 0 1px rgba(255,255,255,0.2);
             pointer-events: auto; transition: all 0.3s ease;
         }
         
         .logo { font-size: 1.4rem; font-weight: 800; color: var(--text-dark); text-decoration: none !important; letter-spacing: -0.5px; }
         
-        .nav-links { display: flex; gap: 2.5rem; list-style: none; align-items: center; margin: 0; padding: 0; }
-        .nav-links a { color: var(--text-gray); font-weight: 600; text-decoration: none !important; font-size: 0.95rem; transition: color 0.3s ease; }
-        .nav-links a:hover { color: var(--text-dark); }
+        .nav-links { display: flex; gap: 2rem; list-style: none; align-items: center; margin: 0; padding: 0; }
+        .nav-links a { color: var(--text-dark); font-weight: 600; text-decoration: none !important; font-size: 0.95rem; transition: color 0.3s ease; }
+        .nav-links a:hover { color: #FF6B6B; }
         
-        .btn-connect {
-            background: var(--text-dark); color: #fff !important; padding: 10px 26px;
-            border-radius: 50px; transition: all 0.3s ease; display: inline-flex; align-items: center; gap: 8px;
-            text-decoration: none !important; font-weight: 600; font-size: 0.95rem; border: none; cursor: pointer;
+        /* Colorful Socials in Navbar */
+        .nav-socials { display: flex; gap: 12px; align-items: center; border-left: 1px solid rgba(0,0,0,0.1); padding-left: 1.5rem; margin-left: 0.5rem; }
+        .nav-social-btn {
+            width: 35px; height: 35px; border-radius: 50%; display: flex; align-items: center; justify-content: center;
+            color: #fff; text-decoration: none; font-size: 1rem; transition: 0.3s; box-shadow: 0 4px 10px rgba(0,0,0,0.1);
         }
-        .btn-connect:hover { transform: translateY(-2px); box-shadow: 0 10px 20px rgba(15,23,42,0.2); }
+        .nav-social-btn:hover { transform: translateY(-3px) scale(1.1); }
         
+        /* Brand Colors */
+        .c-ln { background: #0A66C2; }
+        .c-ig { background: linear-gradient(45deg, #f09433, #dc2743, #bc1888); }
+        .c-yt { background: #FF0000; }
+        .c-tw { background: #000000; }
+
         .menu-toggle { display: none; background: none; border: none; font-size: 1.5rem; cursor: pointer; color: var(--text-dark); }
 
         /* --- Hero Section --- */
-        .hero { min-height: 95vh; display: flex; align-items: center; padding-top: 6rem; }
+        .hero { min-height: 100vh; display: flex; align-items: center; padding-top: 6rem; }
         .hero-grid { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 4rem; align-items: center; }
         
         .badge {
             display: inline-flex; align-items: center; gap: 10px; padding: 8px 18px; border-radius: 50px;
-            background: #fff; box-shadow: var(--shadow-soft); font-weight: 700; font-size: 0.9rem; margin-bottom: 1.8rem;
+            background: rgba(255,255,255,0.6); backdrop-filter: blur(10px); box-shadow: var(--shadow-soft); 
+            font-weight: 700; font-size: 0.9rem; margin-bottom: 1.8rem; border: 1px solid rgba(255,255,255,0.8);
         }
         .badge-dot { width: 10px; height: 10px; background: #FF6B6B; border-radius: 50%; animation: pulseBadge 2s infinite; }
         @keyframes pulseBadge { 0% { box-shadow: 0 0 0 0 rgba(255, 107, 107, 0.4); } 70% { box-shadow: 0 0 0 10px rgba(255, 107, 107, 0); } 100% { box-shadow: 0 0 0 0 rgba(255, 107, 107, 0); } }
@@ -110,37 +118,30 @@
         .type-box span { background: var(--grad-estate); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
         .hero p { font-size: 1.2rem; color: var(--text-gray); margin-bottom: 2.5rem; max-width: 90%; line-height: 1.7; }
         
-        /* Interactive Profile Box */
         .hero-visual { position: relative; display: flex; justify-content: center; }
         .img-wrapper {
             position: relative; width: 380px; height: 420px; border-radius: 30px;
-            background: #fff; padding: 12px; box-shadow: var(--shadow-soft); z-index: 2;
-            transform: rotate(2deg); transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            background: rgba(255,255,255,0.8); backdrop-filter: blur(10px); padding: 12px; 
+            box-shadow: var(--shadow-float); z-index: 2; transform: rotate(2deg); transition: all 0.5s ease;
         }
-        .img-wrapper:hover { transform: rotate(0deg) scale(1.03); box-shadow: var(--shadow-hover); }
+        .img-wrapper:hover { transform: rotate(0deg) scale(1.03); }
         .img-wrapper img { width: 100%; height: 100%; object-fit: cover; border-radius: 20px; }
 
-        /* Floating Graph Updated to "Portfolio" */
         .float-graph {
-            position: absolute; bottom: -10px; left: -25px; background: #fff; padding: 15px 20px; border-radius: 20px;
-            box-shadow: var(--shadow-hover); z-index: 3; display: flex; align-items: flex-end; gap: 8px; height: 100px;
-            animation: bounceFloat 5s infinite ease-in-out;
+            position: absolute; bottom: -15px; left: -30px; background: rgba(255,255,255,0.9); backdrop-filter: blur(10px);
+            padding: 15px 25px; border-radius: 20px; box-shadow: var(--shadow-hover); z-index: 3; display: flex; align-items: center; gap: 12px;
+            animation: bounceFloat 5s infinite ease-in-out; border: 1px solid rgba(255,255,255,1);
         }
-        .f-bar { width: 14px; background: var(--grad-graph); border-radius: 20px; animation: barGrow 2s ease-out forwards; }
-        .fb-1 { height: 35%; } .fb-2 { height: 55%; animation-delay: 0.2s; } .fb-3 { height: 75%; animation-delay: 0.4s; } .fb-4 { height: 100%; animation-delay: 0.6s; }
-        
         @keyframes bounceFloat { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-12px); } }
-        @keyframes barGrow { 0% { transform: scaleY(0); transform-origin: bottom; } 100% { transform: scaleY(1); transform-origin: bottom; } }
 
-        /* --- Premium Showcase Panels --- */
+        /* --- Premium Showcase Panels (Startups) --- */
         .section-title { font-size: 3.2rem; font-weight: 800; text-align: center; margin-bottom: 4rem; letter-spacing: -1px; }
-        
         .showcase-grid { display: grid; gap: 3rem; }
 
         .showcase-panel {
-            background: var(--bg-card); border-radius: 40px; padding: 4rem;
+            background: rgba(255,255,255,0.7); backdrop-filter: blur(20px); border-radius: 40px; padding: 4rem;
             box-shadow: var(--shadow-soft); display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 4rem;
-            align-items: center; position: relative; overflow: hidden; border: 1px solid rgba(0,0,0,0.02);
+            align-items: center; position: relative; overflow: hidden; border: 1px solid rgba(255,255,255,0.9);
             transition: transform 0.4s ease, box-shadow 0.4s ease;
         }
         .showcase-panel:hover { transform: translateY(-5px); box-shadow: var(--shadow-hover); }
@@ -154,100 +155,87 @@
             font-weight: 700; font-size: 0.95rem; background: #fff; box-shadow: 0 4px 15px rgba(0,0,0,0.03);
         }
 
-        /* Builders Specific Styling */
-        .panel-builders { background: linear-gradient(135deg, #ffffff 0%, #FFF5F0 100%); }
-        .tag-orange i { color: #FF6B6B; }
+        .panel-graphic { position: relative; height: 100%; min-height: 350px; border-radius: 24px; display: flex; align-items: center; justify-content: center; }
+        .huge-brand-logo { width: 85%; max-width: 300px; object-fit: contain; filter: drop-shadow(0 20px 30px rgba(0,0,0,0.15)); transition: transform 0.5s ease; }
+        .showcase-panel:hover .huge-brand-logo { transform: scale(1.05) translateY(-10px); }
 
-        /* Estate Specific Styling */
-        .panel-estate { background: linear-gradient(135deg, #ffffff 0%, #F5F3FF 100%); }
-        .tag-purple i { color: #C471ED; }
-
-        /* Big Animated Brand Logos on the Side */
-        .panel-graphic { 
-            position: relative; height: 100%; min-height: 350px; border-radius: 24px; 
-            display: flex; align-items: center; justify-content: center;
-        }
-        .huge-brand-logo {
-            width: 80%; max-width: 280px; object-fit: contain;
-            filter: drop-shadow(0 20px 30px rgba(0,0,0,0.15));
-            transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        .showcase-panel:hover .huge-brand-logo { transform: scale(1.08) translateY(-10px); }
-
-        /* --- Secondary Grid (Map & Growth Upgrade) --- */
+        /* --- Map & Pie Chart Grid --- */
         .secondary-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin-top: 3rem; }
+        .mini-card { background: rgba(255,255,255,0.8); backdrop-filter: blur(15px); border-radius: 32px; padding: 3rem; box-shadow: var(--shadow-soft); display: flex; flex-direction: column; border: 1px solid rgba(255,255,255,0.9); }
         
-        .mini-card { background: var(--bg-card); border-radius: 32px; padding: 3rem; box-shadow: var(--shadow-soft); display: flex; flex-direction: column; border: 1px solid rgba(0,0,0,0.02); }
-        
-        /* Advanced High-Tech Blueprint Map */
+        /* Advanced Territory Map (Updated Locations) */
         .map-visual {
-            position: relative; width: 100%; height: 220px; margin-top: 2rem;
+            position: relative; width: 100%; height: 260px; margin-top: 2rem;
             background: #0B1121; border-radius: 24px; display: flex; align-items: center; justify-content: center; overflow: hidden;
-            /* Grid Pattern */
-            background-image: 
-                linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
-            background-size: 20px 20px;
-            box-shadow: inset 0 0 30px rgba(0,0,0,0.8);
+            background-image: linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
+            background-size: 20px 20px; box-shadow: inset 0 0 30px rgba(0,0,0,0.8);
         }
-        
-        /* Map Radar Sweep Effect */
         .map-visual::after {
-            content: ''; position: absolute; top: 50%; left: 50%; width: 300px; height: 300px;
+            content: ''; position: absolute; top: 50%; left: 50%; width: 350px; height: 350px;
             background: conic-gradient(from 0deg, transparent 70%, rgba(146, 239, 253, 0.4) 100%);
-            border-radius: 50%; transform-origin: center; animation: radarSweep 4s linear infinite;
+            border-radius: 50%; transform-origin: center; animation: radarSweep 4s linear infinite; pointer-events: none;
         }
         @keyframes radarSweep { 0% { transform: translate(-50%, -50%) rotate(0deg); } 100% { transform: translate(-50%, -50%) rotate(360deg); } }
 
-        .kmp-line { position: absolute; width: 90%; height: 3px; background: rgba(255,255,255,0.2); border-radius: 10px; transform: rotate(-8deg); z-index: 2; }
+        .kmp-line { position: absolute; width: 85%; height: 3px; background: rgba(255,255,255,0.3); border-radius: 10px; transform: rotate(-15deg); z-index: 2; }
         
-        .pin { position: absolute; display: flex; flex-direction: column; align-items: center; gap: 6px; z-index: 3; }
-        .pin-dot { width: 14px; height: 14px; background: #92EFFD; border-radius: 50%; box-shadow: 0 0 15px #92EFFD, 0 0 30px #92EFFD; animation: pulseMap 2s infinite; }
-        .pin-label { font-size: 0.75rem; font-weight: 800; color: #fff; background: rgba(0,0,0,0.8); padding: 4px 10px; border-radius: 12px; border: 1px solid rgba(146,239,253,0.3); }
-        .pin-1 { top: 30%; left: 15%; } .pin-2 { top: 48%; left: 45%; } .pin-3 { top: 65%; left: 75%; }
+        .pin { position: absolute; display: flex; flex-direction: column; align-items: center; gap: 4px; z-index: 3; }
+        .pin-dot { width: 12px; height: 12px; background: #92EFFD; border-radius: 50%; box-shadow: 0 0 15px #92EFFD; animation: pulseMap 2s infinite; }
+        .pin-label { font-size: 0.7rem; font-weight: 800; color: #fff; background: rgba(0,0,0,0.8); padding: 3px 8px; border-radius: 10px; border: 1px solid rgba(146,239,253,0.3); white-space: nowrap; }
         
-        /* Advanced Market Analytics Graph */
-        .graph-visual {
-            display: flex; align-items: flex-end; justify-content: space-around; height: 220px;
-            margin-top: 2rem; padding: 20px 20px 0 20px; background: #fff; border-radius: 24px;
-            border: 1px solid rgba(0,0,0,0.06); position: relative; overflow: hidden;
-            background-image: linear-gradient(to top, transparent 95%, rgba(0,0,0,0.03) 5%);
-            background-size: 100% 25%;
-        }
-        .g-bar { 
-            width: 16%; background: var(--grad-graph); border-radius: 8px 8px 0 0; 
-            animation: graphUp 2s ease-out forwards; transform-origin: bottom; position: relative;
-        }
-        /* Value Tooltips */
-        .g-bar::after {
-            content: attr(data-val); position: absolute; top: -25px; left: 50%; transform: translateX(-50%);
-            font-size: 0.8rem; font-weight: 800; color: var(--text-dark); opacity: 0; animation: fadeVal 0.5s 1.5s forwards;
-        }
-        .gb-1 { height: 30%; } .gb-2 { height: 50%; animation-delay: 0.2s; } .gb-3 { height: 80%; animation-delay: 0.4s; } .gb-4 { height: 100%; animation-delay: 0.6s; }
-        
-        @keyframes graphUp { 0% { transform: scaleY(0); } 100% { transform: scaleY(1); } }
-        @keyframes fadeVal { to { opacity: 1; top: -30px; } }
+        /* New Precise Map Coordinates */
+        .pin-gohana { top: 15%; left: 15%; }
+        .pin-ganaur { top: 20%; left: 75%; }
+        .pin-kharkhoda { top: 45%; left: 45%; }
+        .pin-sonipat { top: 40%; left: 70%; }
+        .pin-jhajjar { top: 75%; left: 25%; }
+        .pin-delhi { top: 80%; left: 75%; }
 
-        /* --- Dark Premium Footer --- */
+        /* Modern Animated Pie Chart (Market Analytics) */
+        .pie-visual {
+            display: flex; justify-content: center; align-items: center; gap: 2rem;
+            margin-top: 2rem; padding: 20px; background: #fff; border-radius: 24px; border: 1px solid rgba(0,0,0,0.05);
+        }
+        .donut-chart {
+            width: 140px; height: 140px; border-radius: 50%; position: relative;
+            background: conic-gradient(#FF6B6B 0deg 120deg, #12C2E9 120deg 250deg, #C471ED 250deg 360deg);
+            display: flex; align-items: center; justify-content: center;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1); animation: spinFade 1.5s cubic-bezier(0.1, 0.7, 0.1, 1);
+        }
+        .donut-hole {
+            width: 85px; height: 85px; background: #fff; border-radius: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center; box-shadow: inset 0 4px 10px rgba(0,0,0,0.08);
+        }
+        @keyframes spinFade { 0% { transform: scale(0) rotate(-180deg); opacity: 0; } 100% { transform: scale(1) rotate(0deg); opacity: 1; } }
+        
+        .chart-legend { display: flex; flex-direction: column; gap: 12px; }
+        .legend-item { display: flex; align-items: center; gap: 10px; font-size: 0.9rem; font-weight: 700; color: var(--text-dark); }
+        .l-dot { width: 12px; height: 12px; border-radius: 50%; }
+
+        /* --- FAQ Section --- */
+        .faq-section { max-width: 800px; margin: 0 auto; padding-top: 2rem; }
+        .faq-item { background: #fff; border-radius: 16px; margin-bottom: 1rem; box-shadow: var(--shadow-soft); overflow: hidden; border: 1px solid rgba(0,0,0,0.03); }
+        .faq-question { padding: 1.5rem 2rem; font-weight: 700; font-size: 1.1rem; display: flex; justify-content: space-between; align-items: center; cursor: pointer; color: var(--text-dark); }
+        .faq-answer { padding: 0 2rem; max-height: 0; overflow: hidden; transition: max-height 0.3s ease; color: var(--text-gray); }
+        .faq-item.active .faq-answer { padding-bottom: 1.5rem; max-height: 200px; }
+        .faq-item.active .faq-question i { transform: rotate(180deg); color: #FF6B6B; }
+        .faq-question i { transition: 0.3s; }
+
+        /* --- Deep Slate Premium Colorful Footer --- */
         .footer { 
             background: #0B1121; color: #fff; padding: 6rem 0 3rem; margin-top: 6rem;
             border-radius: 60px 60px 0 0; text-align: center; position: relative;
         }
-        .footer::before {
-            content: ''; position: absolute; top: 0; left: 10%; width: 80%; height: 1px;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.15), transparent);
-        }
-        
         .footer h2 { font-size: 3rem; font-weight: 800; margin-bottom: 1.5rem; letter-spacing: -1px; }
         .footer p { color: #94A3B8; font-size: 1.15rem; max-width: 600px; margin: 0 auto 3rem; }
         
         .social-matrix { display: flex; justify-content: center; flex-wrap: wrap; gap: 1.5rem; margin-bottom: 4rem; }
-        .social-btn {
-            width: 60px; height: 60px; border-radius: 50%; background: rgba(255,255,255,0.03); color: #fff;
+        .social-btn-footer {
+            width: 60px; height: 60px; border-radius: 50%; color: #fff;
             display: flex; align-items: center; justify-content: center; font-size: 1.5rem;
-            text-decoration: none !important; transition: all 0.3s ease; border: 1px solid rgba(255,255,255,0.05);
+            text-decoration: none !important; transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
         }
-        .social-btn:hover { background: #fff; color: #0B1121; transform: translateY(-5px); box-shadow: 0 10px 20px rgba(255,255,255,0.1); }
+        .social-btn-footer:hover { transform: translateY(-5px) scale(1.1); box-shadow: 0 15px 25px rgba(255,255,255,0.1); }
 
         .copyright { color: #64748B; font-size: 0.95rem; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 2rem; }
 
@@ -261,28 +249,26 @@
             .hero-visual { order: -1; margin-bottom: 2rem; }
             .type-box { justify-content: center; display: flex; }
             .showcase-panel { grid-template-columns: 1fr; padding: 3rem; gap: 2rem; }
-            .panel-graphic { min-height: 200px; }
             .huge-brand-logo { width: 50%; }
             .secondary-grid { grid-template-columns: 1fr; }
+            .nav-socials { display: none; } /* Hide extra icons on small tablets */
         }
 
         @media (max-width: 768px) {
             .nav-wrapper { padding: 0 15px; }
-            .header { padding: 0.6rem 1.2rem; }
+            .header { padding: 0.6rem 1.2rem; background: rgba(255,255,255,0.6); }
             .menu-toggle { display: block; }
             
             /* Full Screen Mobile Menu Overlay */
             .nav-links {
                 position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
-                background: rgba(255,255,255,0.98); backdrop-filter: blur(15px);
-                flex-direction: column; justify-content: center; gap: 2.5rem; 
-                transition: opacity 0.4s ease, visibility 0.4s ease;
-                opacity: 0; visibility: hidden; z-index: 999;
+                background: rgba(255,255,255,0.95); backdrop-filter: blur(25px);
+                flex-direction: column; justify-content: center; gap: 2rem; 
+                transition: all 0.4s ease; opacity: 0; visibility: hidden; z-index: 999;
             }
             .nav-links.active { opacity: 1; visibility: visible; }
-            .nav-links a { font-size: 1.5rem; }
-            .desktop-btn { display: none; }
-            .mobile-only-btn { display: block !important; }
+            .nav-links a { font-size: 1.4rem; }
+            .nav-socials { display: flex; margin-top: 2rem; border-left: none; padding-left: 0; gap: 20px; }
             
             .hero h1 { font-size: 3.5rem; }
             .img-wrapper { width: 300px; height: 320px; margin: 0 auto; }
@@ -291,8 +277,8 @@
             .footer { border-radius: 40px 40px 0 0; padding: 4rem 1rem 2rem; }
             .footer h2 { font-size: 2.5rem; }
             .mini-card { padding: 2rem 1.5rem; }
+            .pie-visual { flex-direction: column; }
         }
-        @media (min-width: 769px) { .mobile-only-btn { display: none; } }
     </style>
 </head>
 <body>
@@ -303,31 +289,40 @@
         <div class="blob blob-3"></div>
     </div>
 
-    <!-- Floating Pill Navbar Fixed -->
+    <!-- Transparent Liquid Glass Navbar -->
     <div class="nav-wrapper">
         <header class="header">
             <a href="#" class="logo">Sahil Antil</a>
             <button class="menu-toggle" id="menu-btn" style="z-index: 1001; position: relative;"><i class="fa-solid fa-bars-staggered"></i></button>
+            
             <ul class="nav-links" id="nav-menu">
-                <li><a href="#ventures">The Empire</a></li>
-                <li><a href="#territory">Map & Growth</a></li>
-                <li class="mobile-only-btn"><a href="#contact" class="btn-connect">Connect</a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#startups">Startups</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+                
+                <!-- Colorful Socials inside Nav (Visible in Desktop & Mobile Menu) -->
+                <div class="nav-socials" id="nav-socials">
+                    <a href="https://linkedin.com/in/sahillantill" target="_blank" class="nav-social-btn c-ln"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="https://www.instagram.com/sahillantill" target="_blank" class="nav-social-btn c-ig"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://x.com/sahillantill" target="_blank" class="nav-social-btn c-tw"><i class="fa-brands fa-x-twitter"></i></a>
+                </div>
             </ul>
-            <a href="#contact" class="btn-connect desktop-btn">Let's Talk</a>
         </header>
     </div>
 
-    <!-- Hero Section -->
-    <section class="hero container">
+    <!-- Hero Section / About -->
+    <section id="home" class="hero container">
         <div class="hero-grid">
-            <div class="hero-content reveal">
+            <div class="hero-content reveal" id="about">
                 <div class="badge">
                     <div class="badge-dot"></div> Executing High-Yield Projects
                 </div>
                 <h1>Sahil Antil</h1>
                 <div class="type-box">Expert in <span id="typewriter"></span></div>
-                <p>I am a self-made infrastructure entrepreneur from Sonipat. As the Founder, CEO, and Director of <strong>Kavach Builders</strong> & <strong>Kavach Estate</strong>, I turn bold blueprints into concrete reality across Haryana.</p>
-                <a href="#ventures" class="btn-connect" style="padding: 16px 36px; font-size: 1.1rem; background: var(--text-dark); box-shadow: 0 10px 20px rgba(0,0,0,0.1);">Explore Ventures <i class="fa-solid fa-arrow-right"></i></a>
+                <p>I am a self-made infrastructure entrepreneur from Sonipat. As the Founder, CEO, and Director of <strong>Kavach Builders</strong> & <strong>Kavach Estate</strong>, I turn bold blueprints into concrete reality across Delhi NCR and Haryana.</p>
+                <a href="#startups" style="display:inline-flex; align-items:center; gap:8px; padding: 14px 34px; font-size: 1.1rem; background: var(--text-dark); color:#fff; border-radius:50px; text-decoration:none; font-weight:600; box-shadow: 0 10px 20px rgba(0,0,0,0.1);">Explore Startups <i class="fa-solid fa-arrow-right"></i></a>
             </div>
             
             <div class="hero-visual reveal">
@@ -335,102 +330,130 @@
                     <img src="sahil-photo.JPG" alt="Sahil Antil Real Estate Tycoon">
                 </div>
                 <div class="float-graph">
-                    <div class="f-bar fb-1"></div>
-                    <div class="f-bar fb-2"></div>
-                    <div class="f-bar fb-3"></div>
-                    <div class="f-bar fb-4"></div>
-                    <!-- Updated Text to Portfolio -->
-                    <span style="font-weight:800; font-size:1.2rem; margin-left:8px;">Portfolio <i class="fa-solid fa-arrow-trend-up" style="color:#11998E;"></i></span>
+                    <div style="background:#11998E; width:40px; height:40px; border-radius:50%; display:flex; align-items:center; justify-content:center; color:#fff;">
+                        <i class="fa-solid fa-chart-line"></i>
+                    </div>
+                    <div>
+                        <span style="font-weight:800; font-size:1.1rem; display:block; line-height:1;">Portfolio ↗</span>
+                        <span style="font-size:0.8rem; color:var(--text-gray);">Consistent Growth</span>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Premium Showcase Sections -->
-    <section id="ventures" class="container">
-        <h2 class="section-title reveal">Corporate <span>Empire</span></h2>
+    <!-- Premium Showcase Sections (Startups) -->
+    <section id="startups" class="container">
+        <h2 class="section-title reveal">Corporate <span>Startups</span></h2>
         
         <div class="showcase-grid">
             
             <!-- Kavach Builders Showcase -->
-            <div class="showcase-panel panel-builders reveal">
+            <div class="showcase-panel reveal">
                 <div class="panel-content">
                     <h3 style="color:#FF6B6B;">Kavach Builders</h3>
                     <p>We don't just build, we engineer legacy. From massive heavy-duty industrial factories and warehouses to ultra-luxury villas and farmhouses. We execute complete architecture, interior, and exterior decoration with flawless precision.</p>
                     <div class="tags-grid">
-                        <div class="showcase-tag tag-orange"><i class="fa-solid fa-house-chimney"></i> Luxury Villas</div>
-                        <div class="showcase-tag tag-orange"><i class="fa-solid fa-industry"></i> Factories</div>
-                        <div class="showcase-tag tag-orange"><i class="fa-solid fa-warehouse"></i> Warehouses</div>
-                        <div class="showcase-tag tag-orange"><i class="fa-solid fa-pen-ruler"></i> Architecture</div>
+                        <div class="showcase-tag" style="color:#FF6B6B;"><i class="fa-solid fa-house-chimney"></i> Luxury Villas</div>
+                        <div class="showcase-tag" style="color:#FF6B6B;"><i class="fa-solid fa-industry"></i> Factories</div>
+                        <div class="showcase-tag" style="color:#FF6B6B;"><i class="fa-solid fa-warehouse"></i> Warehouses</div>
+                        <div class="showcase-tag" style="color:#FF6B6B;"><i class="fa-solid fa-pen-ruler"></i> Architecture</div>
                     </div>
                 </div>
                 <div class="panel-graphic">
-                    <!-- Big Builders Logo -->
-                    <img src="kavach_builders.png" alt="Kavach Builders Brand Logo" class="huge-brand-logo">
+                    <img src="kavach_builders.png" alt="Kavach Builders Logo" class="huge-brand-logo">
                 </div>
             </div>
 
             <!-- Kavach Estate Showcase -->
-            <div class="showcase-panel panel-estate reveal" style="direction: rtl;">
+            <div class="showcase-panel reveal" style="direction: rtl;">
                 <div class="panel-content" style="direction: ltr;">
                     <h3 style="color:#C471ED;">Kavach Estate</h3>
                     <p>The ultimate gateway to high-yield properties in Haryana & Delhi-NCR. We secure premium deals in Commercial SCOs, Free Zone Industrial Land, Agricultural Plots, and Residential Colonies. Real estate backed by deep market intelligence.</p>
                     <div class="tags-grid">
-                        <div class="showcase-tag tag-purple"><i class="fa-solid fa-store"></i> Commercial SCO</div>
-                        <div class="showcase-tag tag-purple"><i class="fa-solid fa-map-location-dot"></i> Industrial Land</div>
-                        <div class="showcase-tag tag-purple"><i class="fa-solid fa-chart-area"></i> Free Zone</div>
-                        <div class="showcase-tag tag-purple"><i class="fa-solid fa-tractor"></i> Agriculture</div>
+                        <div class="showcase-tag" style="color:#C471ED;"><i class="fa-solid fa-store"></i> Commercial SCO</div>
+                        <div class="showcase-tag" style="color:#C471ED;"><i class="fa-solid fa-map-location-dot"></i> Industrial Land</div>
+                        <div class="showcase-tag" style="color:#C471ED;"><i class="fa-solid fa-chart-area"></i> Free Zone</div>
+                        <div class="showcase-tag" style="color:#C471ED;"><i class="fa-solid fa-tractor"></i> Agriculture</div>
                     </div>
                 </div>
                 <div class="panel-graphic" style="direction: ltr;">
-                    <!-- Big Estate Logo -->
-                    <img src="kavach_estate.png" alt="Kavach Estate Brand Logo" class="huge-brand-logo">
+                    <img src="kavach_estate.png" alt="Kavach Estate Logo" class="huge-brand-logo">
                 </div>
             </div>
 
         </div>
 
-        <!-- Territory & Growth Mini Cards -->
-        <div class="secondary-grid" id="territory">
+        <!-- Expanded Territory & Animated Pie Chart Grid -->
+        <div class="secondary-grid">
             <!-- Advanced Blueprint Map Card -->
             <div class="mini-card reveal">
-                <h3 style="font-size: 1.8rem; font-weight: 800; margin-bottom: 0.5rem;"><i class="fa-solid fa-satellite-dish" style="color: #4E65FF;"></i> Territory Map</h3>
-                <p style="color: var(--text-gray);">Commanding the deep roots of Sonipat, Kundli, and KMP Belt.</p>
+                <h3 style="font-size: 1.8rem; font-weight: 800; margin-bottom: 0.5rem;"><i class="fa-solid fa-map-location-dot" style="color: #4E65FF;"></i> Territory Map</h3>
+                <p style="color: var(--text-gray);">Commanding the core development zones.</p>
                 <div class="map-visual">
                     <div class="kmp-line"></div>
-                    <div class="pin pin-1"><div class="pin-dot"></div><div class="pin-label">Sonipat</div></div>
-                    <div class="pin pin-2"><div class="pin-dot"></div><div class="pin-label">Kharkhoda</div></div>
-                    <div class="pin pin-3"><div class="pin-dot"></div><div class="pin-label">Jhajjar</div></div>
+                    <!-- 6 Specific Locations -->
+                    <div class="pin pin-gohana"><div class="pin-dot"></div><div class="pin-label">Gohana</div></div>
+                    <div class="pin pin-ganaur"><div class="pin-dot"></div><div class="pin-label">Ganaur</div></div>
+                    <div class="pin pin-kharkhoda"><div class="pin-dot"></div><div class="pin-label">Kharkhoda</div></div>
+                    <div class="pin pin-sonipat"><div class="pin-dot"></div><div class="pin-label">Sonipat Kundli</div></div>
+                    <div class="pin pin-jhajjar"><div class="pin-dot"></div><div class="pin-label">Bahadurgarh</div></div>
+                    <div class="pin pin-delhi"><div class="pin-dot" style="background:#FF6B6B;box-shadow:0 0 15px #FF6B6B;"></div><div class="pin-label" style="background:rgba(255,107,107,0.2); border-color:#FF6B6B;">Delhi NCR</div></div>
                 </div>
             </div>
 
-            <!-- Dashboard Style Growth Card -->
+            <!-- Animated Pie Chart (Donut) Analytics Card -->
             <div class="mini-card reveal">
-                <h3 style="font-size: 1.8rem; font-weight: 800; margin-bottom: 0.5rem;"><i class="fa-solid fa-chart-pie" style="color: #11998E;"></i> Market Analytics</h3>
-                <p style="color: var(--text-gray);">Decoding Govt. plans and infrastructure hacks for informed investing.</p>
-                <div class="graph-visual">
-                    <div class="g-bar gb-1" data-val="25%"></div>
-                    <div class="g-bar gb-2" data-val="50%"></div>
-                    <div class="g-bar gb-3" data-val="85%"></div>
-                    <div class="g-bar gb-4" data-val="100%"></div>
+                <h3 style="font-size: 1.8rem; font-weight: 800; margin-bottom: 0.5rem;"><i class="fa-solid fa-chart-pie" style="color: #12C2E9;"></i> Market Analytics</h3>
+                <p style="color: var(--text-gray);">Data-driven insights for smart real estate investing.</p>
+                <div class="pie-visual">
+                    <div class="donut-chart">
+                        <div class="donut-hole">
+                            <span style="font-size:1.5rem; font-weight:800; color:var(--text-dark); line-height:1;">100%</span>
+                            <span style="font-size:0.7rem; color:var(--text-gray); font-weight:600;">Success</span>
+                        </div>
+                    </div>
+                    <div class="chart-legend">
+                        <div class="legend-item"><div class="l-dot" style="background:#FF6B6B;"></div> Industrial Land (33%)</div>
+                        <div class="legend-item"><div class="l-dot" style="background:#12C2E9;"></div> Commercial Deals (36%)</div>
+                        <div class="legend-item"><div class="l-dot" style="background:#C471ED;"></div> Luxury Housing (31%)</div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Deep Slate Premium Footer -->
+    <!-- FAQ Section -->
+    <section id="faq" class="container reveal">
+        <h2 class="section-title">Frequently Asked <span>Questions</span></h2>
+        <div class="faq-section">
+            <div class="faq-item">
+                <div class="faq-question">What areas does Kavach Estate cover? <i class="fa-solid fa-chevron-down"></i></div>
+                <div class="faq-answer"><p>We deeply cover Sonipat Kundli, Kharkhoda, Gohana, Ganaur, Jhajjar (Bahadurgarh) and the broader Delhi NCR region, specifically focusing on the high-growth KMP belt.</p></div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Does Kavach Builders handle both residential and industrial? <i class="fa-solid fa-chevron-down"></i></div>
+                <div class="faq-answer"><p>Yes, we execute end-to-end projects. From ultra-luxury villas and farmhouses to massive heavy-duty industrial factories and warehouses. Architecture and interior/exterior decoration are included.</p></div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Where can I get your market insights? <i class="fa-solid fa-chevron-down"></i></div>
+                <div class="faq-answer"><p>I regularly share detailed market education, Govt. updates, and infrastructure plans on my Instagram and YouTube channels. Follow @sahillantill for daily updates.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Deep Slate Premium Colorful Footer -->
     <footer id="contact" class="footer reveal">
         <div class="container">
             <h2>Ready to Build an Empire?</h2>
-            <p>Connect with Sahil Antil for massive infrastructure development, high-ticket land acquisitions, or strategic property consultations across Haryana.</p>
+            <p>Connect with Sahil Antil for massive infrastructure development, high-ticket land acquisitions, or strategic property consultations across Haryana & Delhi NCR.</p>
             
             <div class="social-matrix">
-                <a href="https://linkedin.com/in/sahillantill" target="_blank" class="social-btn"><i class="fa-brands fa-linkedin-in"></i></a>
-                <a href="https://x.com/sahillantill" target="_blank" class="social-btn"><i class="fa-brands fa-x-twitter"></i></a>
-                <a href="https://www.instagram.com/sahillantill" target="_blank" class="social-btn"><i class="fa-brands fa-instagram"></i></a>
-                <a href="https://www.youtube.com/sahilantil" target="_blank" class="social-btn"><i class="fa-brands fa-youtube"></i></a>
-                <a href="https://www.facebook.com/sahillantill" target="_blank" class="social-btn"><i class="fa-brands fa-facebook-f"></i></a>
-                <a href="https://www.reddit.com/user/sahillantill" target="_blank" class="social-btn"><i class="fa-brands fa-reddit-alien"></i></a>
+                <a href="https://linkedin.com/in/sahillantill" target="_blank" class="social-btn-footer c-ln"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://www.instagram.com/sahillantill" target="_blank" class="social-btn-footer c-ig"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://x.com/sahillantill" target="_blank" class="social-btn-footer c-tw"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="https://www.youtube.com/sahilantil" target="_blank" class="social-btn-footer c-yt"><i class="fa-brands fa-youtube"></i></a>
+                <a href="https://www.facebook.com/sahillantill" target="_blank" class="social-btn-footer" style="background:#1877F2;"><i class="fa-brands fa-facebook-f"></i></a>
             </div>
 
             <p class="copyright">&copy; 2026 Sahil Antil. Founder & CEO of Kavach Builders & Kavach Estate. Executing Vision into Reality.</p>
@@ -464,6 +487,17 @@
             });
         });
 
+        // FAQ Toggle Logic
+        const faqItems = document.querySelectorAll('.faq-item');
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            question.addEventListener('click', () => {
+                const isActive = item.classList.contains('active');
+                faqItems.forEach(faq => faq.classList.remove('active')); // Close others
+                if (!isActive) item.classList.add('active'); // Open clicked
+            });
+        });
+
         // CSS Scroll Reveal
         function revealElements() {
             const reveals = document.querySelectorAll('.reveal');
@@ -481,7 +515,7 @@
         revealElements();
 
         // Advanced Typing Effect
-        const words = ["Luxury Construction.", "KMP Land Deals.", "Industrial Setup.", "Real Estate Analytics."];
+        const words = ["Luxury Construction.", "KMP Land Deals.", "Industrial Setup.", "Delhi NCR Properties."];
         let i = 0, timer;
         const typeTarget = document.getElementById('typewriter');
 
