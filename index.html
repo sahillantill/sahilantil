@@ -10,7 +10,7 @@
     <meta name="keywords" content="Sahil Antil, Kavach Builders, Kavach Estate, Sonipat Kundli, Kharkhoda, Jhajjar Real Estate, Delhi NCR Infrastructure">
     <meta name="author" content="Sahil Antil">
 
-    <!-- Google Fonts: Roboto (Classic Google Style) -->
+    <!-- Google Fonts: Roboto -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
@@ -23,10 +23,9 @@
         :root {
             --bg-body: #F4F7F9; 
             --bg-card: #FFFFFF;
-            --text-dark: #202124; /* Google standard dark */
-            --text-gray: #5F6368; /* Google standard gray */
+            --text-dark: #202124; 
+            --text-gray: #5F6368; 
             
-            /* Gradients */
             --grad-builders: linear-gradient(135deg, #FF6B6B 0%, #FF8E53 100%); 
             --grad-estate: linear-gradient(135deg, #12C2E9 0%, #C471ED 50%, #F64F59 100%); 
             
@@ -38,7 +37,7 @@
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        html { scroll-behavior: smooth; overflow-x: hidden; scroll-padding-top: 120px; }
+        html { scroll-behavior: smooth; overflow-x: hidden; scroll-padding-top: 100px; }
         
         body { 
             font-family: var(--font-main); background-color: var(--bg-body); 
@@ -57,41 +56,40 @@
         @keyframes floatBg { 0% { transform: translate(0,0) scale(1); } 100% { transform: translate(30px, 30px) scale(1.05); } }
 
         .container { max-width: 1240px; margin: 0 auto; padding: 0 2rem; }
-        section { padding: 6rem 0; position: relative; } /* Added relative for layout stability */
+        section { padding: 6rem 0; position: relative; }
 
         .single-line { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 
         /* --- LIQUID GLASS NAVBAR --- */
         .nav-wrapper {
             position: fixed; top: 20px; left: 0; width: 100%; z-index: 1000;
-            display: flex; justify-content: center; pointer-events: none; padding: 0 1rem;
+            display: flex; justify-content: center; pointer-events: none; padding: 0 1.5rem;
         }
         .header {
             background: rgba(255, 255, 255, 0.25);
             backdrop-filter: blur(25px) saturate(150%);
             -webkit-backdrop-filter: blur(25px) saturate(150%);
-            border: none; 
-            border-radius: 100px;
-            padding: 0.6rem 1.2rem 0.6rem 2rem; 
+            border: none; border-radius: 100px;
+            padding: 0.5rem 1rem 0.5rem 1.5rem; 
             display: flex; justify-content: space-between; align-items: center;
-            width: 100%; max-width: 1200px; 
+            width: 100%; max-width: 1100px; 
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
             pointer-events: auto; transition: all 0.3s ease;
         }
         
         .nav-left { flex: 1; display: flex; justify-content: flex-start; align-items: center; }
         .nav-center { flex: 2; display: flex; justify-content: center; align-items: center; }
-        .nav-right { flex: 1; display: flex; justify-content: flex-end; align-items: center; gap: 10px; }
+        .nav-right { flex: 1; display: flex; justify-content: flex-end; align-items: center; gap: 8px; }
 
         .logo { font-size: 1.4rem; font-weight: 900; color: var(--text-dark); text-decoration: none !important; letter-spacing: -0.5px; }
         
-        .nav-links { display: flex; gap: 2rem; list-style: none; margin: 0; padding: 0; }
-        .nav-links a { color: var(--text-dark); font-weight: 500; text-decoration: none !important; font-size: 0.95rem; transition: color 0.3s ease; letter-spacing: 0.2px; }
+        .nav-links { display: flex; gap: 1.5rem; list-style: none; margin: 0; padding: 0; }
+        .nav-links a { color: var(--text-dark); font-weight: 600; text-decoration: none !important; font-size: 0.95rem; transition: color 0.3s ease; }
         .nav-links a:hover { color: #FF6B6B; }
         
         .nav-social-btn {
-            width: 38px; height: 38px; border-radius: 50%; display: flex; align-items: center; justify-content: center;
-            color: #fff; text-decoration: none; font-size: 1.1rem; transition: 0.3s; box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center;
+            color: #fff; text-decoration: none; font-size: 1rem; transition: 0.3s; box-shadow: 0 4px 10px rgba(0,0,0,0.1);
         }
         .nav-social-btn:hover { transform: translateY(-3px) scale(1.1); box-shadow: 0 8px 15px rgba(0,0,0,0.2); }
         
@@ -103,7 +101,7 @@
 
         .menu-toggle { display: none; background: none; border: none; font-size: 1.5rem; cursor: pointer; color: var(--text-dark); }
 
-        /* Mobile Menu */
+        /* Full Screen Mobile Menu */
         .mobile-menu-overlay {
             position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
             background: rgba(255,255,255,0.95); backdrop-filter: blur(25px);
@@ -111,7 +109,7 @@
             transition: all 0.4s ease; opacity: 0; visibility: hidden; z-index: 999; display: none;
         }
         .mobile-menu-overlay.active { opacity: 1; visibility: visible; }
-        .mobile-menu-overlay a { font-size: 1.6rem; font-weight: 700; color: var(--text-dark); text-decoration: none; }
+        .mobile-menu-overlay a { font-size: 1.5rem; font-weight: 700; color: var(--text-dark); text-decoration: none; }
         .mobile-socials { display: flex; gap: 15px; margin-top: 2rem; }
 
         /* --- Hero Section --- */
@@ -119,8 +117,10 @@
         .hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
         
         .hero h1 { font-size: clamp(3rem, 5vw, 4.8rem); font-weight: 900; line-height: 1.1; margin-bottom: 1rem; letter-spacing: -1.5px; }
-        .type-box { font-size: 1.6rem; font-weight: 700; color: var(--text-gray); margin-bottom: 1.5rem; height: 40px; }
+        
+        .type-box { display: flex; align-items: center; gap: 8px; font-size: 1.6rem; font-weight: 700; color: var(--text-gray); margin-bottom: 1.5rem; height: 40px; }
         .type-box span { background: var(--grad-estate); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        
         .hero p { font-size: 1.2rem; color: var(--text-gray); margin-bottom: 2.5rem; max-width: 90%; line-height: 1.6; }
         
         .hero-visual { position: relative; display: flex; justify-content: center; }
@@ -133,7 +133,7 @@
         .img-wrapper img { width: 100%; height: 100%; object-fit: cover; border-radius: 30px; }
 
         /* --- Showcase Panels --- */
-        .section-title { font-size: clamp(2.5rem, 4vw, 3.2rem); font-weight: 900; text-align: center; margin-bottom: 4rem; letter-spacing: -1px; color: var(--text-dark); }
+        .section-title { font-size: clamp(2.2rem, 4vw, 3.2rem); font-weight: 900; text-align: center; margin-bottom: 4rem; letter-spacing: -1px; color: var(--text-dark); }
         .showcase-grid { display: grid; gap: 3rem; }
 
         .showcase-panel {
@@ -146,18 +146,27 @@
         .showcase-panel h3 { font-size: 2.5rem; font-weight: 800; margin-bottom: 1rem; letter-spacing: -1px; }
         .showcase-panel p { color: var(--text-gray); font-size: 1.15rem; line-height: 1.8; margin-bottom: 2rem; }
 
-        .tags-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+        .tags-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 2rem; }
         .showcase-tag {
             display: flex; align-items: center; gap: 10px; padding: 12px 16px; border-radius: 12px;
             font-weight: 700; font-size: 0.95rem; background: #fff; box-shadow: 0 4px 15px rgba(0,0,0,0.03); white-space: nowrap;
         }
 
-        .panel-graphic { position: relative; height: 100%; min-height: 350px; border-radius: 30px; display: flex; align-items: center; justify-content: center; overflow: hidden; }
-        .huge-brand-logo { width: 90%; max-width: 320px; object-fit: contain; border-radius: 20px; filter: drop-shadow(0 20px 30px rgba(0,0,0,0.1)); transition: transform 0.5s ease; }
+        /* Buttons for Ventures */
+        .btn-venture {
+            display: inline-flex; align-items: center; gap: 8px; padding: 12px 24px; border-radius: 50px; 
+            font-weight: 700; font-size: 1rem; text-decoration: none; transition: all 0.3s ease; border: 2px solid transparent;
+        }
+        .btn-builders { background: #FFF0ED; color: #FF6B6B; border-color: #FF6B6B; }
+        .btn-builders:hover { background: #FF6B6B; color: #fff; box-shadow: 0 10px 20px rgba(255,107,107,0.2); }
+        .btn-estate { background: #F9F0FF; color: #C471ED; border-color: #C471ED; }
+        .btn-estate:hover { background: #C471ED; color: #fff; box-shadow: 0 10px 20px rgba(196,113,237,0.2); }
+
+        .panel-graphic { position: relative; height: 100%; min-height: 300px; border-radius: 30px; display: flex; align-items: center; justify-content: center; }
+        .huge-brand-logo { width: 90%; max-width: 320px; object-fit: contain; border-radius: 24px; filter: drop-shadow(0 15px 25px rgba(0,0,0,0.1)); transition: transform 0.5s ease; }
         .showcase-panel:hover .huge-brand-logo { transform: scale(1.05); }
 
-        /* --- Map & Pie Chart Grid (EQUAL SIZES FIX) --- */
-        /* Flex stretch ensures equal card heights */
+        /* --- Map & Pie Chart Grid --- */
         .secondary-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin-top: 3rem; margin-bottom: 2rem; align-items: stretch; }
         
         .mini-card { 
@@ -167,24 +176,23 @@
         }
         .mini-card h3 { font-size: clamp(1.5rem, 2.5vw, 1.8rem); font-weight: 800; margin-bottom: 0.5rem; }
         
-        /* INNER BOXES (Fixed identical heights & widths) */
         .map-visual, .pie-visual {
-            width: 100%; height: 280px; /* Locked Height for perfect symmetry */
-            margin-top: 1.5rem; border-radius: 24px;
+            width: 100%; height: 280px; margin-top: 1.5rem; border-radius: 24px;
             display: flex; align-items: center; justify-content: center;
         }
 
         /* Working Area Map - Black Box */
         .map-visual {
-            position: relative; background: #202124; overflow: hidden;
+            position: relative; background: #181C25; overflow: hidden;
             background-image: linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
-            background-size: 20px 20px; box-shadow: inset 0 0 30px rgba(0,0,0,0.8);
+            background-size: 20px 20px; box-shadow: inset 0 0 30px rgba(0,0,0,0.5);
         }
-        .kmp-line { position: absolute; width: 85%; height: 3px; background: rgba(255,255,255,0.2); border-radius: 10px; transform: rotate(-15deg); z-index: 2; }
+        .kmp-line { position: absolute; width: 85%; height: 3px; background: rgba(255,255,255,0.15); border-radius: 10px; transform: rotate(-15deg); z-index: 2; }
         .pin { position: absolute; display: flex; flex-direction: column; align-items: center; gap: 4px; z-index: 3; }
+        
         /* SQUARE PINS */
-        .pin-dot { width: 12px; height: 12px; background: #92EFFD; border-radius: 3px; box-shadow: 0 0 15px #92EFFD; animation: pulseMap 2s infinite; }
-        .pin-label { font-size: 0.7rem; font-weight: 700; color: #fff; background: rgba(0,0,0,0.85); padding: 4px 8px; border-radius: 3px; border: 1px solid rgba(146,239,253,0.4); white-space: nowrap; text-transform: uppercase; letter-spacing: 0.5px; }
+        .pin-dot { width: 10px; height: 10px; background: #92EFFD; border-radius: 2px; box-shadow: 0 0 10px #92EFFD; animation: pulseMap 2s infinite; }
+        .pin-label { font-size: 0.65rem; font-weight: 700; color: #fff; background: rgba(0,0,0,0.8); padding: 3px 6px; border-radius: 4px; border: 1px solid rgba(146,239,253,0.3); white-space: nowrap; text-transform: uppercase; letter-spacing: 0.5px; }
         
         .pin-gohana { top: 15%; left: 15%; }
         .pin-ganaur { top: 20%; left: 75%; }
@@ -192,13 +200,10 @@
         .pin-sonipat { top: 40%; left: 70%; }
         .pin-jhajjar { top: 75%; left: 25%; }
         .pin-delhi { top: 80%; left: 75%; }
-        @keyframes pulseMap { 0% { box-shadow: 0 0 0 0 rgba(146, 239, 253, 0.6); } 70% { box-shadow: 0 0 0 15px rgba(146, 239, 253, 0); } 100% { box-shadow: 0 0 0 0 rgba(146, 239, 253, 0); } }
+        @keyframes pulseMap { 0% { box-shadow: 0 0 0 0 rgba(146, 239, 253, 0.6); } 70% { box-shadow: 0 0 0 10px rgba(146, 239, 253, 0); } 100% { box-shadow: 0 0 0 0 rgba(146, 239, 253, 0); } }
 
         /* Market Analytics - Premium Frosted Light Box */
-        .pie-visual {
-            background: #F8FAFC; border: 1px solid rgba(0,0,0,0.05); gap: 2rem;
-            flex-direction: row; box-shadow: inset 0 0 20px rgba(0,0,0,0.02);
-        }
+        .pie-visual { background: #F8FAFC; border: 1px solid rgba(0,0,0,0.05); gap: 2rem; flex-direction: row; box-shadow: inset 0 0 15px rgba(0,0,0,0.02); }
         
         .donut-chart {
             width: 140px; height: 140px; border-radius: 50%; position: relative;
@@ -216,18 +221,13 @@
         .legend-item { display: flex; align-items: center; gap: 8px; font-size: 0.85rem; font-weight: 700; color: var(--text-dark); white-space: nowrap; }
         .l-dot { width: 12px; height: 12px; border-radius: 3px; }
 
-        /* --- Clearfix for Overlap --- */
-        .clear-fix { clear: both; width: 100%; height: 1px; margin-bottom: 2rem; }
-
-        /* --- Proper Glassmorphism FAQ Section --- */
-        /* Adding padding top ensures it never overlaps components above it */
+        /* --- Glassmorphism FAQ Section --- */
         #faq { padding-top: 2rem; }
-        
         .faq-glass-wrapper {
             max-width: 900px; margin: 0 auto;
-            background: rgba(255, 255, 255, 0.4); backdrop-filter: blur(25px); -webkit-backdrop-filter: blur(25px);
-            border-radius: 40px; padding: 4rem; border: 1px solid rgba(255, 255, 255, 0.6);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.05); text-align: center;
+            background: rgba(255, 255, 255, 0.6); backdrop-filter: blur(25px);
+            border-radius: 40px; padding: 4rem; border: 1px solid rgba(255, 255, 255, 0.8);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.04); text-align: center;
         }
         .faq-item { background: #fff; border-radius: 12px; margin-bottom: 1rem; box-shadow: var(--shadow-soft); overflow: hidden; border: 1px solid rgba(0,0,0,0.02); text-align: left; transition: transform 0.3s ease; }
         .faq-item:hover { transform: translateX(5px); }
@@ -238,48 +238,81 @@
 
         /* --- Deep Slate Premium Footer --- */
         .footer { 
-            background: #202124; color: #fff; padding: 6rem 0 3rem; margin-top: 6rem;
+            background: #202124; color: #fff; padding: 5rem 0 2rem; margin-top: 5rem;
             border-radius: 60px 60px 0 0; text-align: center;
         }
-        .footer h2 { font-size: clamp(2rem, 4vw, 3rem); font-weight: 900; margin-bottom: 1.5rem; letter-spacing: -1px; }
-        .footer p { color: #9AA0A6; font-size: 1.15rem; max-width: 600px; margin: 0 auto 3rem; }
+        .footer h2 { font-size: clamp(2rem, 4vw, 2.5rem); font-weight: 900; margin-bottom: 1rem; letter-spacing: -1px; }
+        .footer p { color: #9AA0A6; font-size: 1.1rem; max-width: 600px; margin: 0 auto 2.5rem; }
         
-        .social-matrix { display: flex; justify-content: center; flex-wrap: wrap; gap: 1.5rem; margin-bottom: 4rem; }
+        .social-matrix { display: flex; justify-content: center; flex-wrap: wrap; gap: 1.2rem; margin-bottom: 3rem; }
         .social-btn-footer {
-            width: 60px; height: 60px; border-radius: 50%; color: #fff;
-            display: flex; align-items: center; justify-content: center; font-size: 1.5rem;
+            width: 55px; height: 55px; border-radius: 50%; color: #fff;
+            display: flex; align-items: center; justify-content: center; font-size: 1.3rem;
             text-decoration: none !important; transition: all 0.3s ease; box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            border: 1px solid rgba(255,255,255,0.05);
         }
-        .social-btn-footer:hover { transform: translateY(-5px) scale(1.1); box-shadow: 0 15px 25px rgba(255,255,255,0.1); }
+        .social-btn-footer:hover { transform: translateY(-5px) scale(1.1); box-shadow: 0 15px 25px rgba(255,255,255,0.1); background: #fff; color: #202124; }
 
-        .copyright { color: #9AA0A6; font-size: 0.95rem; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 2rem; }
+        .copyright { color: #5F6368; font-size: 0.9rem; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 1.5rem; }
 
         /* Scroll Animations */
         .reveal { opacity: 0; transform: translateY(30px); transition: 0.8s ease; }
         .reveal.active { opacity: 1; transform: translateY(0); }
 
-        /* --- Mobile Responsiveness --- */
+        /* --- MOBILE RESPONSIVENESS FIXES (100% Focused) --- */
         @media (max-width: 992px) {
-            .nav-right { display: none; } 
+            .nav-right, .nav-center { display: none; } 
             .menu-toggle { display: block; }
             .mobile-menu-overlay { display: flex; } 
-            .hero-grid { grid-template-columns: 1fr; text-align: center; }
-            .hero-visual { order: -1; margin-bottom: 2rem; }
-            .type-box { justify-content: center; display: flex; }
+            .hero-grid { grid-template-columns: 1fr; text-align: center; gap: 2rem; }
+            .hero-visual { order: -1; margin-bottom: 1rem; }
+            .type-box { justify-content: center; }
             .showcase-panel { grid-template-columns: 1fr; padding: 3rem; gap: 2rem; }
-            .huge-brand-logo { width: 50%; }
+            .huge-brand-logo { width: 60%; max-width: 250px; }
             .secondary-grid { grid-template-columns: 1fr; }
         }
 
         @media (max-width: 768px) {
-            .header { padding: 0.5rem 1rem; }
-            .nav-center { display: none; }
-            .img-wrapper { width: 300px; height: 320px; margin: 0 auto; border-radius: 30px; }
-            .showcase-panel { padding: 2.5rem 1.5rem; border-radius: 30px; }
-            .tags-grid { grid-template-columns: 1fr; }
-            .pie-visual { flex-direction: column; height: auto; padding-bottom: 2rem; } /* Let pie chart stack on phones */
-            .faq-glass-wrapper { padding: 2rem 1.5rem; border-radius: 24px; }
-            .footer { border-radius: 40px 40px 0 0; padding: 4rem 1rem 2rem; }
+            section { padding: 4rem 0; }
+            .container { padding: 0 1.2rem; } /* Removed double padding */
+            
+            .header { padding: 0.5rem 1rem; border-radius: 50px; }
+            .hero { min-height: auto; padding-top: 8rem; padding-bottom: 2rem; }
+            
+            /* Typewriter text wrapping fix */
+            .type-box { flex-direction: column; height: auto; min-height: 60px; font-size: 1.3rem; margin-bottom: 2rem; }
+            .type-box span { font-size: 1.5rem; }
+            
+            .img-wrapper { width: 100%; max-width: 320px; height: auto; aspect-ratio: 1/1.1; margin: 0 auto; border-radius: 30px; }
+            .showcase-panel { padding: 2.5rem 1.5rem; border-radius: 24px; text-align: center; }
+            .brand-header { justify-content: center; }
+            
+            .tags-grid { grid-template-columns: 1fr; margin-bottom: 1.5rem; }
+            .btn-venture { width: 100%; justify-content: center; }
+            
+            .panel-graphic { min-height: 200px; padding-top: 1rem; }
+            .huge-brand-logo { width: 80%; }
+            
+            .secondary-grid { gap: 2rem; margin-top: 2rem; }
+            .mini-card { padding: 2rem 1.5rem; border-radius: 24px; }
+            
+            .map-visual { height: 240px; border-radius: 16px; }
+            .pin-label { font-size: 0.55rem; padding: 2px 4px; }
+            
+            .pie-visual { flex-direction: column; height: auto; padding: 2rem 1rem; gap: 1.5rem; margin-top: 1.5rem; border-radius: 16px; }
+            .chart-legend { align-items: center; }
+            
+            .faq-glass-wrapper { padding: 2rem 1.2rem; border-radius: 20px; }
+            .faq-question { padding: 1.2rem 1rem; font-size: 0.95rem; }
+            .faq-answer { padding: 0 1rem; }
+            
+            /* Footer compact fix */
+            .footer { border-radius: 40px 40px 0 0; padding: 4rem 1rem 2rem; margin-top: 4rem; }
+            .footer h2 { font-size: 2rem; }
+            .footer p { font-size: 1rem; margin-bottom: 2rem; }
+            .social-matrix { gap: 1rem; margin-bottom: 2.5rem; }
+            .social-btn-footer { width: 45px; height: 45px; font-size: 1.2rem; }
+            .copyright { padding-top: 1.5rem; font-size: 0.85rem; }
         }
     </style>
 </head>
@@ -320,7 +353,7 @@
             </div>
 
             <!-- Mobile Toggle -->
-            <button class="menu-toggle" id="menu-btn" style="z-index: 1001; position: relative;"><i class="fa-solid fa-bars-staggered"></i></button>
+            <button class="menu-toggle" id="menu-btn"><i class="fa-solid fa-bars-staggered"></i></button>
         </header>
     </div>
 
@@ -348,7 +381,10 @@
                     <div class="badge-dot" style="width:10px; height:10px; background:#FF6B6B; border-radius:3px; animation:pulseBadge 2s infinite;"></div> Executing High-Yield Projects
                 </div>
                 <h1 class="single-line">Sahil Antil</h1>
+                
+                <!-- Fixed wrapping issue on mobile -->
                 <div class="type-box">Expert in <span id="typewriter"></span></div>
+                
                 <p>I am a self-made infrastructure entrepreneur from Sonipat. As the Founder, CEO, and Director of <strong>Kavach Builders</strong> & <strong>Kavach Estate</strong>, I turn bold blueprints into concrete reality across Delhi NCR and Haryana.</p>
                 <a href="#startups" style="display:inline-flex; align-items:center; gap:8px; padding: 14px 34px; font-size: 1.05rem; background: var(--text-dark); color:#fff; border-radius:50px; text-decoration:none; font-weight:700; box-shadow: 0 10px 20px rgba(0,0,0,0.1);">Explore Startups <i class="fa-solid fa-arrow-right"></i></a>
             </div>
@@ -378,6 +414,10 @@
                         <div class="showcase-tag" style="color:#FF6B6B;"><i class="fa-solid fa-warehouse"></i> Warehouses</div>
                         <div class="showcase-tag" style="color:#FF6B6B;"><i class="fa-solid fa-pen-ruler"></i> Architecture</div>
                     </div>
+                    <!-- Added Link Button -->
+                    <div style="margin-top: 2rem;">
+                        <a href="https://www.kavachbuilders.com" target="_blank" class="btn-venture btn-builders">Visit Website <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
                 </div>
                 <div class="panel-graphic">
                     <img src="kavach_builders.png" alt="Kavach Builders Logo" class="huge-brand-logo">
@@ -395,6 +435,10 @@
                         <div class="showcase-tag" style="color:#C471ED;"><i class="fa-solid fa-chart-area"></i> Free Zone</div>
                         <div class="showcase-tag" style="color:#C471ED;"><i class="fa-solid fa-tractor"></i> Agriculture</div>
                     </div>
+                    <!-- Added Link Button -->
+                    <div style="margin-top: 2rem;">
+                        <a href="https://www.kavachestate.com" target="_blank" class="btn-venture btn-estate">Visit Website <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
                 </div>
                 <div class="panel-graphic" style="direction: ltr;">
                     <img src="kavach_estate.png" alt="Kavach Estate Logo" class="huge-brand-logo">
@@ -409,6 +453,7 @@
             <div class="mini-card reveal">
                 <h3 class="single-line"><i class="fa-solid fa-map-location-dot" style="color: #4E65FF;"></i> Working Area</h3>
                 <p style="color: var(--text-gray);">Commanding the core development zones.</p>
+                <!-- Heights locked to 280px -->
                 <div class="map-visual">
                     <div class="kmp-line"></div>
                     <div class="pin pin-gohana"><div class="pin-dot"></div><div class="pin-label">Gohana</div></div>
@@ -416,7 +461,7 @@
                     <div class="pin pin-kharkhoda"><div class="pin-dot"></div><div class="pin-label">Kharkhoda</div></div>
                     <div class="pin pin-sonipat"><div class="pin-dot"></div><div class="pin-label">Sonipat Kundli</div></div>
                     <div class="pin pin-jhajjar"><div class="pin-dot"></div><div class="pin-label">Bahadurgarh</div></div>
-                    <div class="pin pin-delhi"><div class="pin-dot" style="background:#FF6B6B;box-shadow:0 0 15px #FF6B6B;"></div><div class="pin-label" style="background:rgba(255,107,107,0.2); border-color:#FF6B6B;">Delhi NCR</div></div>
+                    <div class="pin pin-delhi"><div class="pin-dot" style="background:#FF6B6B;box-shadow:0 0 10px #FF6B6B;"></div><div class="pin-label" style="background:rgba(0,0,0,0.85); border-color:#FF6B6B;">Delhi NCR</div></div>
                 </div>
             </div>
 
@@ -424,6 +469,7 @@
             <div class="mini-card reveal">
                 <h3 class="single-line"><i class="fa-solid fa-chart-pie" style="color: #12C2E9;"></i> Market Analytics</h3>
                 <p style="color: var(--text-gray);">Area distribution and sector investment metrics.</p>
+                <!-- Heights locked to 280px -->
                 <div class="pie-visual">
                     <div class="donut-chart">
                         <div class="donut-hole">
@@ -443,7 +489,6 @@
             </div>
         </div>
         
-        <div class="clear-fix"></div> <!-- Safe boundary clearance -->
     </section>
 
     <!-- Glassmorphism FAQ Section -->
@@ -539,7 +584,7 @@
         window.addEventListener('scroll', revealElements);
         revealElements();
 
-        // Advanced Typing Effect
+        // Advanced Typing Effect (Mobile Fixed)
         const words = ["Luxury Construction.", "KMP Land Deals.", "Industrial Setup.", "Delhi NCR Properties."];
         let i = 0, timer;
         const typeTarget = document.getElementById('typewriter');
