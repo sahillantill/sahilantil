@@ -8,7 +8,7 @@
 
     <meta name="author" content="Sahil Antil">
     <meta name="description" content="Official knowledge graph portfolio of Sahil Antil, a premier self-made infrastructure entrepreneur based in Sonipat, Haryana. Founder of Kavach Builders and Kavach Estate.">
-    <meta name="keywords" content="Sahil Antil, Sahil Antil Sonipat, Sahil Antil entrepreneur, @sahillantill, self-made entrepreneur India, Kavach Builders founder, Kavach Estate founder, Top construction company Sonipat">
+    <meta name="keywords" content="Sahil Antil, Sahil Antil Sonipat, Sahil Antil entrepreneur, @sahillantill, self-made entrepreneur India, Kavach Builders founder, Kavach Estate founder">
 
     <link rel="canonical" href="https://www.sahilantil.com">
 
@@ -56,20 +56,20 @@
 
     <style>
         :root {
-            --bg-main: #060911;
-            --bg-surface: rgba(255, 255, 255, 0.02);
-            --bg-surface-hover: rgba(255, 255, 255, 0.05);
-            --border-color: rgba(255, 255, 255, 0.06);
-            --border-hover: rgba(0, 122, 255, 0.35);
+            --bg-main: #030712;
+            --bg-card: rgba(15, 23, 42, 0.3);
+            --bg-card-hover: rgba(30, 41, 59, 0.5);
+            --border-glow: rgba(59, 130, 246, 0.2);
+            --border-color: rgba(255, 255, 255, 0.05);
             
             --text-primary: #F8FAFC;
             --text-secondary: #94A3B8;
-            --text-muted: #64748B;
+            --text-muted: #475569;
             
-            --accent: #007AFF;
-            --accent-glow: rgba(0, 122, 255, 0.15);
+            --accent: #3B82F6;
+            --accent-gradient: linear-gradient(135deg, #3B82F6 0%, #1D4ED8 100%);
             --font-premium: 'Plus Jakarta Sans', sans-serif;
-            --nav-height: 80px;
+            --nav-height: 90px;
         }
 
         * {
@@ -83,44 +83,43 @@
             background-color: var(--bg-main);
         }
 
-        /* Ambient Dynamic Background Framework */
         body {
             font-family: var(--font-premium);
             background-color: var(--bg-main);
             color: var(--text-primary);
-            line-height: 1.75;
+            line-height: 1.8;
             -webkit-font-smoothing: antialiased;
             overflow-x: hidden;
             position: relative;
         }
 
-        /* Modern Abstract Base Orbs */
-        body::before, body::after {
-            content: '';
+        /* Ambient Animated Mesh Background */
+        .ambient-glow-system {
             position: absolute;
-            width: 600px;
-            height: 600px;
-            border-radius: 50%;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
             z-index: -2;
             pointer-events: none;
-            filter: blur(140px);
-            opacity: 0.4;
-            animation: pulseGlow 10s infinite alternate ease-in-out;
-        }
-        body::before {
-            top: -10%;
-            left: -10%;
-            background: radial-gradient(circle, rgba(0,122,255,0.15) 0%, rgba(0,0,0,0) 80%);
-        }
-        body::after {
-            top: 40%;
-            right: -10%;
-            background: radial-gradient(circle, rgba(0,122,255,0.08) 0%, rgba(0,0,0,0) 80%);
+            overflow: hidden;
         }
 
-        @keyframes pulseGlow {
-            0% { transform: scale(1) translate(0, 0); }
-            100% { transform: scale(1.1) translate(20px, 20px); }
+        .glow-orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(160px);
+            opacity: 0.25;
+            animation: orbFloat 12s infinite alternate ease-in-out;
+        }
+
+        .orb-1 { width: 500px; height: 500px; background: #3B82F6; top: -10%; left: -10%; }
+        .orb-2 { width: 600px; height: 600px; background: #1D4ED8; top: 35%; right: -15%; animation-delay: -3s; }
+        .orb-3 { width: 450px; height: 450px; background: #60A5FA; bottom: 5%; left: 10%; animation-delay: -6s; }
+
+        @keyframes orbFloat {
+            0% { transform: scale(1) translate(0, 0) rotate(0deg); }
+            100% { transform: scale(1.15) translate(40px, 30px) rotate(90deg); }
         }
 
         .container {
@@ -130,103 +129,87 @@
         }
 
         section {
-            padding: 10rem 0 6rem 0;
+            padding: 10rem 0 4rem 0;
         }
 
-        /* --- Elite Glassmorphic Navbar --- */
+        /* --- Floating Capsule Navbar --- */
         .navbar {
             position: fixed;
-            top: 0;
+            top: 20px;
             left: 0;
             width: 100%;
-            height: var(--nav-height);
             z-index: 1000;
-            border-bottom: 1px solid transparent;
             transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
-        .navbar.scrolled {
-            height: 70px;
-            background: rgba(6, 9, 17, 0.75);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border-bottom: 1px solid var(--border-color);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
-        }
-
-        .nav-container {
+        .nav-wrapper {
+            background: rgba(15, 23, 42, 0.4);
+            border: 1px solid var(--border-color);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            padding: 0.75rem 2rem;
+            border-radius: 20px;
             display: flex;
             align-items: center;
             justify-content: space-between;
-            height: 100%;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            transition: all 0.4s ease;
+        }
+
+        .navbar.scrolled .nav-wrapper {
+            background: rgba(3, 7, 18, 0.8);
+            border-color: rgba(59, 130, 246, 0.2);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7), 0 0 20px rgba(59, 130, 246, 0.05);
         }
 
         .nav-logo {
-            font-size: 1.25rem;
+            font-size: 1.3rem;
             font-weight: 800;
-            letter-spacing: -0.5px;
+            letter-spacing: -1px;
             color: var(--text-primary);
             text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 8px;
         }
 
         .nav-logo span {
-            color: var(--accent);
+            background: linear-gradient(90deg, #60A5FA, #3B82F6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
         .nav-menu {
             display: flex;
             align-items: center;
-            gap: 2.5rem;
+            gap: 3rem;
             list-style: none;
         }
 
         .nav-link {
             font-size: 0.95rem;
-            font-weight: 500;
+            font-weight: 600;
             color: var(--text-secondary);
             text-decoration: none;
-            transition: color 0.3s ease;
-            position: relative;
-        }
-
-        .nav-link:hover {
-            color: var(--text-primary);
-        }
-
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            bottom: -6px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background-color: var(--accent);
-            transition: width 0.3s ease;
-        }
-
-        .nav-link:hover::after {
-            width: 100%;
-        }
-
-        .nav-cta {
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid var(--border-color);
-            padding: 10px 20px;
-            border-radius: 10px;
-            font-weight: 600;
             transition: all 0.3s ease;
         }
 
-        .nav-cta:hover {
-            background: var(--text-primary);
-            color: var(--bg-main) !important;
-            border-color: var(--text-primary);
+        .nav-link:hover {
+            color: #60A5FA;
         }
 
-        /* Mobile Menu Toggle button */
+        .nav-cta {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.15), rgba(29, 46, 216, 0.15));
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            padding: 8px 20px;
+            border-radius: 12px;
+            color: #60A5FA !important;
+        }
+
+        .nav-cta:hover {
+            background: var(--accent-gradient);
+            color: white !important;
+            border-color: transparent;
+            box-shadow: 0 0 20px rgba(59, 130, 246, 0.4);
+        }
+
         .menu-toggle {
             display: none;
             background: none;
@@ -238,7 +221,7 @@
 
         /* --- Hero Section Layout --- */
         .hero {
-            min-height: 95vh;
+            min-height: 100vh;
             display: flex;
             align-items: center;
         }
@@ -246,87 +229,120 @@
         .hero-content {
             display: grid;
             grid-template-columns: auto 1fr;
-            gap: 5rem;
+            gap: 6rem;
             align-items: center;
-            padding-top: var(--nav-height);
+            padding-top: 4rem;
         }
 
-        .hero-image-wrapper {
+        .hero-image-box {
             position: relative;
         }
 
+        /* Decorative Background Frame Behind Picture */
+        .hero-image-box::before {
+            content: '';
+            position: absolute;
+            inset: -8px;
+            border-radius: 40px;
+            background: linear-gradient(135deg, rgba(59,130,246,0.5), transparent, rgba(29,78,216,0.3));
+            z-index: -1;
+        }
+
         .hero-image img {
-            width: 320px;
-            height: 320px;
+            width: 340px;
+            height: 340px;
             border-radius: 32px;
             object-fit: cover;
-            border: 1px solid var(--border-color);
-            box-shadow: 0 40px 80px rgba(0,0,0,0.6);
+            border: 1px solid rgba(255,255,255,0.08);
+            box-shadow: 0 50px 100px rgba(0,0,0,0.7);
             transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
-        .hero-image-wrapper:hover .hero-image img {
-            transform: scale(1.02) translateY(-6px);
+        .hero-image-box:hover img {
+            transform: scale(1.02) translateY(-8px);
         }
 
         .tagline {
             font-size: 0.85rem;
-            font-weight: 700;
+            font-weight: 800;
             text-transform: uppercase;
-            letter-spacing: 2.5px;
-            color: var(--accent);
-            margin-bottom: 1.25rem;
-            display: inline-block;
+            letter-spacing: 3px;
+            color: #60A5FA;
+            margin-bottom: 1.5rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .tagline::before {
+            content: '';
+            width: 8px;
+            height: 8px;
+            background: #3B82F6;
+            border-radius: 50%;
+            box-shadow: 0 0 10px #3B82F6;
         }
 
         h1 {
-            font-size: 4.25rem;
+            font-size: 4.5rem;
             font-weight: 800;
-            line-height: 1.15;
-            letter-spacing: -2px;
-            margin-bottom: 1.5rem;
-            background: linear-gradient(180deg, #FFFFFF 30%, #94A3B8 100%);
+            line-height: 1.1;
+            letter-spacing: -2.5px;
+            margin-bottom: 2rem;
+            background: linear-gradient(180deg, #FFFFFF 40%, #94A3B8 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
         .subtitle {
-            font-size: 1.3rem;
+            font-size: 1.35rem;
             color: var(--text-secondary);
-            margin-bottom: 2.5rem;
-            max-width: 560px;
+            margin-bottom: 3rem;
+            max-width: 580px;
         }
 
         .cta-button {
-            background-color: var(--text-primary);
-            color: var(--bg-main);
-            padding: 16px 36px;
-            border-radius: 14px;
-            font-weight: 600;
-            font-size: 1rem;
+            background: var(--accent-gradient);
+            color: white;
+            padding: 18px 40px;
+            border-radius: 16px;
+            font-weight: 700;
+            font-size: 1.05rem;
             display: inline-flex;
             align-items: center;
             gap: 12px;
             text-decoration: none;
-            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            box-shadow: 0 20px 40px rgba(59, 130, 246, 0.25);
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
         .cta-button:hover {
-            background-color: transparent;
-            color: var(--text-primary);
-            border: 1px solid var(--text-primary);
-            transform: translateY(-2px);
+            transform: translateY(-3px);
+            box-shadow: 0 30px 50px rgba(59, 130, 246, 0.4);
         }
 
-        /* --- Section Header Layout --- */
+        /* --- Section Header Custom Styling --- */
         .section-title {
-            font-size: 2.5rem;
+            font-size: 2.75rem;
             font-weight: 800;
-            letter-spacing: -1px;
-            margin-bottom: 4rem;
+            letter-spacing: -1.5px;
+            margin-bottom: 5rem;
+            position: relative;
+            display: inline-block;
         }
 
-        /* --- Startups Bento Grid Box --- */
+        .section-title::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+            width: 40px;
+            height: 4px;
+            background: #3B82F6;
+            border-radius: 2px;
+        }
+
+        /* --- Startups Modern Grid --- */
         .startups-section {
             border-top: 1px solid var(--border-color);
         }
@@ -334,7 +350,7 @@
         .startup-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 2.5rem;
+            gap: 3rem;
         }
 
         .startup-card-link {
@@ -343,29 +359,45 @@
         }
 
         .startup-card {
-            background: var(--bg-surface);
+            background: var(--bg-card);
             border: 1px solid var(--border-color);
-            border-radius: 32px;
-            padding: 3.5rem;
+            border-radius: 36px;
+            padding: 4rem;
             height: 100%;
             display: flex;
             flex-direction: column;
-            gap: 2rem;
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
+            gap: 2.5rem;
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            position: relative;
             transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
+        /* Elegant Vertical Accent Line inside card */
+        .startup-card::before {
+            content: '';
+            position: absolute;
+            top: 4rem;
+            left: 0;
+            width: 4px;
+            height: 50px;
+            background: #3B82F6;
+            border-radius: 0 4px 4px 0;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
         .card-logo-box {
-            width: 68px;
-            height: 68px;
-            background: rgba(255, 255, 255, 0.02);
-            border: 1px solid var(--border-color);
-            border-radius: 20px;
+            width: 76px;
+            height: 76px;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 22px;
             display: flex;
             align-items: center;
             justify-content: center;
             overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
         }
 
         .card-logo-box img {
@@ -375,41 +407,46 @@
         }
 
         .startup-card h3 {
-            font-size: 1.85rem;
+            font-size: 2rem;
             font-weight: 700;
-            margin-bottom: 0.85rem;
+            margin-bottom: 1rem;
             letter-spacing: -0.5px;
         }
 
         .startup-card p {
             color: var(--text-secondary);
-            font-size: 1.1rem;
-            line-height: 1.65;
+            font-size: 1.15rem;
+            line-height: 1.75;
         }
 
         .card-footer-link {
             margin-top: auto;
-            font-weight: 600;
-            color: var(--accent);
+            font-weight: 700;
+            color: #60A5FA;
             display: inline-flex;
             align-items: center;
-            gap: 8px;
-            font-size: 1.05rem;
+            gap: 10px;
+            font-size: 1.1rem;
         }
 
         .card-footer-link i {
+            font-size: 0.95rem;
             transition: transform 0.3s ease;
         }
 
         .startup-card-link:hover .startup-card {
-            background: var(--bg-surface-hover);
-            border-color: var(--border-hover);
-            box-shadow: 0 40px 80px rgba(0,0,0,0.3), 0 0 60px var(--accent-glow);
-            transform: translateY(-8px);
+            background: var(--bg-card-hover);
+            border-color: rgba(59, 130, 246, 0.4);
+            box-shadow: 0 40px 80px rgba(0,0,0,0.5), 0 0 40px rgba(59, 130, 246, 0.1);
+            transform: translateY(-10px);
+        }
+
+        .startup-card-link:hover .startup-card::before {
+            opacity: 1;
         }
 
         .startup-card-link:hover .card-footer-link i {
-            transform: translateX(5px);
+            transform: translate(3px, -3px);
         }
 
         /* --- About Section Matrix --- */
@@ -418,78 +455,125 @@
         }
 
         .about-layout {
-            max-width: 840px;
+            max-width: 880px;
         }
 
         .about-section p {
-            font-size: 1.45rem;
-            line-height: 1.85;
+            font-size: 1.5rem;
+            line-height: 1.9;
             color: var(--text-secondary);
         }
 
-        /* --- Footer Matrix & Social Framework --- */
+        /* --- Footer Matrix & EXTREME Colorful Social Framework --- */
         .footer {
             border-top: 1px solid var(--border-color);
-            background: linear-gradient(180deg, var(--bg-main) 0%, rgba(0,122,255,0.01) 100%);
+            background: linear-gradient(180deg, var(--bg-main) 0%, rgba(59,130,246,0.02) 100%);
             padding-bottom: 5rem;
         }
 
         .footer-content {
             text-align: center;
-            max-width: 800px;
-            margin: 0 auto;
         }
 
         .footer h2 {
-            font-size: 3.25rem;
+            font-size: 3.5rem;
             font-weight: 800;
-            letter-spacing: -1.5px;
-            margin-bottom: 1.5rem;
+            letter-spacing: -2px;
+            margin-bottom: 2rem;
         }
 
         .footer p.footer-desc {
-            font-size: 1.3rem;
+            font-size: 1.35rem;
             color: var(--text-secondary);
-            margin-bottom: 4rem;
+            margin-bottom: 5rem;
+            max-width: 720px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
+        /* High-End Colorful Dynamic Social Grid */
         .social-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            gap: 1.25rem;
-            margin-bottom: 5rem;
+            gap: 1.5rem;
+            margin-bottom: 6rem;
         }
 
         .social-badge {
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 12px;
-            padding: 20px;
-            background: var(--bg-surface);
+            gap: 14px;
+            padding: 22px;
+            background: rgba(255, 255, 255, 0.02);
             border: 1px solid var(--border-color);
-            border-radius: 18px;
-            font-weight: 600;
+            border-radius: 24px;
+            font-weight: 700;
+            font-size: 1.05rem;
             color: var(--text-primary);
             text-decoration: none;
-            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            position: relative;
+            overflow: hidden;
         }
 
         .social-badge i {
-            font-size: 1.25rem;
-            color: var(--text-secondary);
-            transition: color 0.3s ease;
+            font-size: 1.4rem;
+            transition: transform 0.3s ease;
         }
 
-        .social-badge:hover {
-            background: var(--bg-surface-hover);
-            border-color: var(--text-primary);
-            transform: translateY(-4px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        /* Setup platform specific authentic identity colors and glowing states */
+        .sb-linkedin:hover {
+            background: rgba(10, 102, 194, 0.15);
+            border-color: #0a66c2;
+            color: #0a66c2;
+            box-shadow: 0 15px 30px rgba(10, 102, 194, 0.2), 0 0 20px rgba(10, 102, 194, 0.1);
+        }
+        .sb-twitter:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: #F8FAFC;
+            color: #F8FAFC;
+            box-shadow: 0 15px 30px rgba(255, 255, 255, 0.1);
+        }
+        .sb-instagram:hover {
+            background: linear-gradient(135deg, rgba(225, 48, 108, 0.15), rgba(131, 58, 180, 0.15));
+            border-color: #e1306c;
+            color: #fd1d1d;
+            box-shadow: 0 15px 30px rgba(225, 48, 108, 0.25);
+        }
+        .sb-youtube:hover {
+            background: rgba(255, 0, 0, 0.12);
+            border-color: #ff0000;
+            color: #ff0000;
+            box-shadow: 0 15px 30px rgba(255, 0, 0, 0.2);
+        }
+        .sb-threads:hover {
+            background: rgba(255, 255, 255, 0.05);
+            border-color: #94A3B8;
+            color: white;
+            box-shadow: 0 15px 30px rgba(255, 255, 255, 0.1);
+        }
+        .sb-facebook:hover {
+            background: rgba(24, 119, 242, 0.15);
+            border-color: #1877f2;
+            color: #1877f2;
+            box-shadow: 0 15px 30px rgba(24, 119, 242, 0.2);
+        }
+        .sb-snapchat:hover {
+            background: rgba(255, 252, 0, 0.1);
+            border-color: #fffc00;
+            color: #fffc00;
+            box-shadow: 0 15px 30px rgba(255, 252, 0, 0.15);
+        }
+        .sb-reddit:hover {
+            background: rgba(255, 69, 0, 0.15);
+            border-color: #ff4500;
+            color: #ff4500;
+            box-shadow: 0 15px 30px rgba(255, 69, 0, 0.2);
         }
 
         .social-badge:hover i {
-            color: var(--text-primary);
+            transform: scale(1.15);
         }
 
         .copyright {
@@ -499,17 +583,19 @@
             padding-top: 3rem;
         }
 
-        /* --- System Responsiveness mechanics --- */
+        /* --- Advanced System Responsiveness Mechanics --- */
         @media (max-width: 968px) {
+            .navbar { top: 0; }
+            .nav-wrapper { border-radius: 0; border-inline: none; }
             .menu-toggle { display: block; }
             .nav-menu {
                 position: fixed;
-                top: var(--nav-height);
+                top: 70px;
                 left: -100%;
                 width: 100%;
-                height: calc(100vh - var(--nav-height));
-                background: rgba(6, 9, 17, 0.98);
-                backdrop-filter: blur(20px);
+                height: calc(100vh - 70px);
+                background: rgba(3, 7, 18, 0.98);
+                backdrop-filter: blur(24px);
                 flex-direction: column;
                 padding: 4rem 2rem;
                 justify-content: flex-start;
@@ -517,51 +603,60 @@
                 transition: left 0.4s cubic-bezier(0.16, 1, 0.3, 1);
             }
             .nav-menu.active { left: 0; }
-            .nav-link { font-size: 1.25rem; }
-            .hero-content { grid-template-columns: 1fr; gap: 3.5rem; text-align: center; }
-            .hero-image-wrapper { order: -1; }
+            .nav-link { font-size: 1.3rem; }
+            .hero-content { grid-template-columns: 1fr; gap: 4rem; text-align: center; }
+            .hero-image-box { order: -1; }
             .hero-image img { width: 260px; height: 260px; margin: 0 auto; }
             h1 { font-size: 3.5rem; }
-            .startup-grid { grid-template-columns: 1fr; gap: 2rem; }
+            .startup-grid { grid-template-columns: 1fr; gap: 2.5rem; }
             .social-grid { grid-template-columns: repeat(2, 1fr); }
-            section { padding: 6rem 0; }
+            section { padding: 8rem 0 4rem 0; }
         }
 
-        @media (max-width: 480px) {
-            h1 { font-size: 2.75rem; }
-            .social-grid { grid-template-columns: 1fr; }
-            .startup-card { padding: 2.5rem 2rem; }
+        @media (max-width: 580px) {
+            h1 { font-size: 2.8rem; }
+            .social-grid { grid-template-columns: 1fr; gap: 1rem; }
+            .startup-card { padding: 3rem 2rem; }
+            .navbar { top: 0; }
         }
     </style>
 </head>
 
 <body>
 
-    <nav class="navbar" id="navbar">
-        <div class="container nav-container">
-            <a href="#hero" class="nav-logo">SAHIL ANTIL<span>.</span></a>
-            <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Navigation"><i class="fa-solid fa-bars"></i></button>
-            <ul class="nav-menu" id="nav-menu">
-                <li><a href="#hero" class="nav-link">Home</a></li>
-                <li><a href="#startups" class="nav-link">Ventures</a></li>
-                <li><a href="#about" class="nav-link">Foundation</a></li>
-                <li><a href="#contact" class="nav-link nav-cta">Let's Connect</a></li>
-            </ul>
-        </div>
-    </nav>
+    <div class="ambient-glow-system">
+        <div class="glow-orb orb-1"></div>
+        <div class="glow-orb orb-2"></div>
+        <div class="glow-orb orb-3"></div>
+    </div>
+
+    <div class="container">
+        <nav class="navbar" id="navbar">
+            <div class="nav-wrapper">
+                <a href="#hero" class="nav-logo">SAHIL ANTIL<span>.</span></a>
+                <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Navigation"><i class="fa-solid fa-bars"></i></button>
+                <ul class="nav-menu" id="nav-menu">
+                    <li><a href="#hero" class="nav-link">Home</a></li>
+                    <li><a href="#startups" class="nav-link">Ventures</a></li>
+                    <li><a href="#about" class="nav-link">Foundation</a></li>
+                    <li><a href="#contact" class="nav-link nav-cta">Let's Connect</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
 
     <section id="hero" class="hero">
         <div class="container hero-content">
-            <div class="hero-image-wrapper">
+            <div class="hero-image-box">
                 <div class="hero-image">
-                    <img src="sahil-photo.JPG" alt="Sahil Antil Profile Representation">
+                    <img src="sahil-photo.JPG" alt="Sahil Antil Corporate Profile Portfolio">
                 </div>
             </div>
             <div class="hero-text">
                 <span class="tagline">Sonipat, Delhi-NCR</span>
                 <h1>Sahil Antil</h1>
-                <p class="subtitle">Self-made infrastructure entrepreneur and industrialist. Founder of Kavach Builders & Kavach Estate. Tracking ecosystems via @sahillantill.</p>
-                <a href="#contact" class="cta-button">Initiate Connection <i class="fa-solid fa-arrow-right"></i></a>
+                <p class="subtitle">Self-made infrastructure entrepreneur and industrialist. Founder of Kavach Builders & Kavach Estate. Synthesizing asset intelligence via @sahillantill.</p>
+                <a href="#contact" class="cta-button">Initiate Synergy <i class="fa-solid fa-arrow-right"></i></a>
             </div>
         </div>
     </section>
@@ -574,26 +669,26 @@
                 <a href="https://www.kavachbuilders.com" target="_blank" rel="noopener noreferrer" class="startup-card-link">
                     <div class="startup-card">
                         <div class="card-logo-box">
-                            <img src="kavach-builders.jpeg" alt="Kavach Builders Corporate Logo">
+                            <img src="kavach_builders.png" alt="Kavach Builders Corporate Identity">
                         </div>
                         <div>
                             <h3>Kavach Builders</h3>
-                            <p>An integrated construction development engineering system and heavy raw materials enterprise. Leading the automated high-pressure manufacturing of commercial-grade interlocking tiles and ultra-durable paver blocks.</p>
+                            <p>An integrated construction development engineering framework and heavy raw materials enterprise. Orchestrating high-pressure automated production of industrial-grade interlocking tiles and heavy paver blocks.</p>
                         </div>
-                        <span class="card-footer-link">Launch Corporate Site <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+                        <span class="card-footer-link">Launch Corporate Venture <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
                     </div>
                 </a>
 
                 <a href="https://www.kavachestate.com" target="_blank" rel="noopener noreferrer" class="startup-card-link">
                     <div class="startup-card">
                         <div class="card-logo-box">
-                            <img src="kavach-estate.PNG" alt="Kavach Estate Corporate Logo">
+                            <img src="kavach_estate.png" alt="Kavach Estate Corporate Identity">
                         </div>
                         <div>
                             <h3>Kavach Estate</h3>
-                            <p>A specialized commercial real estate and brokerage consulting ecosystem in Sonipat. Optimizing high-yield industrial site acquisitions, structural zoning clearance, and premium land investment portfolios.</p>
+                            <p>A premier commercial real estate consulting network based in Sonipat. Strategic handling of corporate asset acquisitions, zoning parameters, and high-yield industrial site procurement layouts.</p>
                         </div>
-                        <span class="card-footer-link">Launch Asset Portfolio <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+                        <span class="card-footer-link">Explore Asset Portfolio <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
                     </div>
                 </a>
 
@@ -606,7 +701,7 @@
             <h2 class="section-title">The Foundation</h2>
             <div class="about-layout">
                 <p>
-                    I am an absolute field entrepreneur—built entirely on execution, real-world grit, and deep-ground operational strategy. I engineered Kavach Builders and Kavach Estate from the ground up to establish an institutional asset ecosystem in Haryana. We streamline everything from highly complex layout procurement frameworks to automated manufacturing of heavy concrete structural units, setting new standards for the modern infrastructure space.
+                    I am an absolute field entrepreneur—built entirely on raw execution, real-world grit, and hands-on ground operational management. I engineered Kavach Builders and Kavach Estate from the grass-roots level to structure a seamless, institutional property development matrix across the Haryana infrastructure landscape.
                 </p>
             </div>
         </div>
@@ -616,20 +711,20 @@
         <div class="container footer-content">
             <section style="padding: 4rem 0 2rem 0;">
                 <h2>Strategic Channel Sync</h2>
-                <p class="footer-desc">Globally unified ecosystem deployment under the single direct handle @sahillantill for real estate scaling, project alliances, and industrial expansion.</p>
+                <p class="footer-desc">Globally deployment structure synchronized under the direct industrial handle @sahillantill for core corporate alliances, project development, and scaling.</p>
                 
                 <div class="social-grid">
-                    <a href="https://linkedin.com/in/sahilantil2030" target="_blank" rel="noopener noreferrer" class="social-badge"><i class="fa-brands fa-linkedin-in"></i> LinkedIn</a>
-                    <a href="https://x.com/sahillantill" target="_blank" rel="noopener noreferrer" class="social-badge"><i class="fa-brands fa-x-twitter"></i> Twitter</a>
-                    <a href="https://www.instagram.com/sahillantill" target="_blank" rel="noopener noreferrer" class="social-badge"><i class="fa-brands fa-instagram"></i> Instagram</a>
-                    <a href="https://www.youtube.com/sahilantil2030" target="_blank" rel="noopener noreferrer" class="social-badge"><i class="fa-brands fa-youtube"></i> YouTube</a>
-                    <a href="https://www.threads.net/@sahillantill" target="_blank" rel="noopener noreferrer" class="social-badge"><i class="fa-brands fa-threads"></i> Threads</a>
-                    <a href="https://www.facebook.com/sahilantil2030" target="_blank" rel="noopener noreferrer" class="social-badge"><i class="fa-brands fa-facebook-f"></i> Facebook</a>
-                    <a href="https://www.snapchat.com/add/sahilantil2030" target="_blank" rel="noopener noreferrer" class="social-badge"><i class="fa-brands fa-snapchat"></i> Snapchat</a>
-                    <a href="https://www.reddit.com/user/sahilantil2030" target="_blank" rel="noopener noreferrer" class="social-badge"><i class="fa-brands fa-reddit-alien"></i> Reddit</a>
+                    <a href="https://linkedin.com/in/sahillantill" target="_blank" rel="noopener noreferrer" class="social-badge sb-linkedin"><i class="fa-brands fa-linkedin-in"></i> LinkedIn</a>
+                    <a href="https://x.com/sahillantill" target="_blank" rel="noopener noreferrer" class="social-badge sb-twitter"><i class="fa-brands fa-x-twitter"></i> Twitter</a>
+                    <a href="https://www.instagram.com/sahillantill" target="_blank" rel="noopener noreferrer" class="social-badge sb-instagram"><i class="fa-brands fa-instagram"></i> Instagram</a>
+                    <a href="https://www.youtube.com/sahilantil" target="_blank" rel="noopener noreferrer" class="social-badge sb-youtube"><i class="fa-brands fa-youtube"></i> YouTube</a>
+                    <a href="https://www.threads.net/@sahillantill" target="_blank" rel="noopener noreferrer" class="social-badge sb-threads"><i class="fa-brands fa-threads"></i> Threads</a>
+                    <a href="https://www.facebook.com/sahillantill" target="_blank" rel="noopener noreferrer" class="social-badge sb-facebook"><i class="fa-brands fa-facebook-f"></i> Facebook</a>
+                    <a href="https://www.snapchat.com/add/sahillantill" target="_blank" rel="noopener noreferrer" class="social-badge sb-snapchat"><i class="fa-brands fa-snapchat"></i> Snapchat</a>
+                    <a href="https://www.reddit.com/user/sahillantill" target="_blank" rel="noopener noreferrer" class="social-badge sb-reddit"><i class="fa-brands fa-reddit-alien"></i> Reddit</a>
                 </div>
                 
-                <p class="copyright">&copy; 2026 Sahil Antil. Verified Entrepreneur Portfolio Grid.</p>
+                <p class="copyright">&copy; 2026 Sahil Antil. Corporate Independent Ecosystem Framework.</p>
             </section>
         </div>
     </footer>
@@ -640,16 +735,16 @@
             const menuToggle = document.getElementById('menu-toggle');
             const navMenu = document.getElementById('nav-menu');
 
-            // Scroll Mechanics for Transparent to Solid Navigation Transition
+            // Scroll Control Mechanics for Float Base Transformation
             window.addEventListener('scroll', () => {
-                if (window.scrollY > 20) {
+                if (window.scrollY > 40) {
                     navbar.classList.add('scrolled');
                 } else {
                     navbar.classList.remove('scrolled');
                 }
             });
 
-            // Mobile Device Navigation Matrix Toggle
+            // Mobile Device Navigation Matrix Control Toggle
             menuToggle.addEventListener('click', () => {
                 navMenu.classList.toggle('active');
                 const icon = menuToggle.querySelector('i');
@@ -660,7 +755,7 @@
                 }
             });
 
-            // Auto Close Menu layout on selection
+            // Auto-Close Trigger for Mobile Screens Navigation Selection
             document.querySelectorAll('.nav-link').forEach(link => {
                 link.addEventListener('click', () => {
                     navMenu.classList.remove('active');
@@ -668,7 +763,7 @@
                 });
             });
 
-            // Smooth Scroll System Setup
+            // Smooth Scrolling Setup Framework
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 anchor.addEventListener('click', function (e) {
                     e.preventDefault();
